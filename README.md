@@ -41,7 +41,7 @@ poetry shell
 
 Start the development server:
 ```bash
-poetry run uvicorn app.main:app --reload
+poetry run uvicorn app.main:app --host 0.0.0.0 --port 8080 --reload
 ```
 
 The application will be available at:

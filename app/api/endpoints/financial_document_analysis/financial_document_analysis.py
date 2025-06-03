@@ -1,33 +1,43 @@
-from fastapi import APIRouter, UploadFile, File
-from app.services.google_provider import call_google_provider
-from app.services.models import GeminiRequestParams
+from fastapi import APIRouter, UploadFile, File, HTTPException
+from uuid import uuid4
+import logging
+import json
 
-from .prompts import FinancialDocumentAnalysisPrompts
+from app.agents.pdf_extractor import PDFExtractorAgent
+from app.agents.pdf_extractor.prompt import PDF_EXTRACTOR_PROMPT
+from app.agents.pdf_extractor.models import FinancialAnalysisSchema
+
+logger = logging.getLogger(__name__)
 
 router = APIRouter()
 
-# @router.post("/test_google_provider")
-# async def test_google_provider():
-#     response = await call_google_provider(
-#         GeminiRequestParams(
-#             user_prompt="Who are you?",
-#             system_prompt="",
-#             model="gemini-1.5-flash",
-#             is_json=False
-#         )
-#     )
-#     return response.response
 
+@router.post(
+    "/financial_document_analysis", response_model=FinancialAnalysisSchema
+)
+async def financial_document_analysis(
+    file: UploadFile = File(...), is_rich_text: bool = False
+):
+    user_id = str(uuid4())
+    session_id = str(uuid4())
+    try:
 
-@router.post("/financial_document_analysis")
-async def financial_document_analysis(file: UploadFile = File(...)):
-    return await call_google_provider(
-        GeminiRequestParams(
-            user_prompt="Analyse the financial document and provide the answer in a tabular format with 3 columns.",
-            system_prompt=FinancialDocumentAnalysisPrompts.FINANCIAL_DOCUMENT_ANALYSIS_v2.value,
-            model="gemini-2.0-flash",
-            is_json=False,
-            file=file
+        pdf_extractor = PDFExtractorAgent(prompt=PDF_EXTRACTOR_PROMPT)
+
+        content = await pdf_extractor.call_agent(
+            file=file, user_id=user_id, session_id=session_id, is_rich_text=is_rich_text
         )
-    )
 
+        if isinstance(content, dict):
+            return content
+        elif isinstance(content, FinancialAnalysisSchema):
+            logger.info("-" * 60)
+            logger.info(f"Content is a FinancialAnalysisSchema")
+            logger.info("-" * 60)
+            return content
+        else:
+            logger.exception(f"Error calling agent: {content}")
+            raise HTTPException(status_code=500, detail="Error calling agent")
+    except Exception as e:
+        logger.exception(f"Error calling agent: {e}")
+        raise HTTPException(status_code=500, detail=str(e)) from e
