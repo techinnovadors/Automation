@@ -326,6 +326,6 @@ class FinancialAnalysis(BaseModel):
 
 # --- Top-level schema ---
 class FinancialAnalysisSchema(BaseModel):
-    financial_analysis: Optional[FinancialAnalysis] = Field(
-        None, description="The comprehensive financial analysis report."
+    financial_analysis: FinancialAnalysis = Field(
+        ..., description="The comprehensive financial analysis report."
     )

@@ -51,11 +51,10 @@ class PDFExtractorAgent:
         self, file: UploadFile, user_id, session_id, is_rich_text: bool = False
     ):
         if is_rich_text:
-
+            file_content = self._get_file_content(file)
+        else:
             text = await process_uploaded_pdf(file)
             file_content = Part(text=text)
-        else:
-            file_content = self._get_file_content(file)
 
         await self.session_service.create_session(
             app_name=APP_NAME, user_id=user_id, session_id=session_id
@@ -78,8 +77,13 @@ class PDFExtractorAgent:
                 if event.content and event.content.parts:
                     raw_json = event.content.parts[0].text
                     try:
+                        logger.info("Validating JSON against schema")
                         # Directly validate the JSON against the Pydantic schema
-                        return FinancialAnalysisSchema.model_validate_json(raw_json)
+                        data = FinancialAnalysisSchema.model_validate_json(raw_json)
+                        if data.financial_analysis:
+                            return data
+                        else:
+                            return json.loads(raw_json)
                     except (
                         Exception
                     ) as e:  # Catch Pydantic's ValidationError specifically or a broader Exception
