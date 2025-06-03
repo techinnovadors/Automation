@@ -14,12 +14,12 @@ where “value” must exactly match the number + unit as shown in the PDF (e.g.
 ------------
 
 1. **overall_financial_summary**  
-   – Compare “most recent FY” vs “prior FY.”  
-   – For each of the two years, extract and report exactly as written in the PDF (do not convert units). That means:
+   - Compare “most recent FY” vs “prior FY.”  
+   - For each of the two years, extract and report exactly as written in the PDF (do not convert units). That means:
      • If the PDF says “Total Equity = 18,252.53 lakhs,” you quote “18,252.53 lakhs.”  
      • If it says “Total Equity = ₹ 182.53 Crores,” you quote “₹ 182.53 Crores.”  
-   – Required line items (quote exactly as shown):
-     • Shareholders’ Equity  
+   - Required line items (quote exactly as shown):
+     • Shareholders' Equity  
      • Equity Share Capital  
      • Total Debt (Long-term + Short-term borrowings)  
      • Total Assets  
@@ -31,27 +31,27 @@ where “value” must exactly match the number + unit as shown in the PDF (e.g.
      • Other Income  
      • Total Income  
      • Total Operating Expenses  
-       – Key subcomponents:  
-         – Cost of Services & Spare Parts Consumed  
-         – Employee Benefit Expenses  
-         – Other Expenses  
-       – Finance Costs  
-       – Depreciation & Amortisation Expense  
+       - Key subcomponents:  
+         - Cost of Services & Spare Parts Consumed  
+         - Employee Benefit Expenses  
+         - Other Expenses  
+       - Finance Costs  
+       - Depreciation & Amortisation Expense  
      • Profit/(Loss) for the year (Net Profit After Tax)  
      • Total Tax Expense  
 
-   – For each item, provide:
+   - For each item, provide:
      1. **value** exactly as shown (e.g., “18,252.53 lakhs” or “₹ 182.53 Crores”)  
      2. **notes**: a brief explanation of why it changed from the prior year (e.g., “↑ due to bonus issue of 11,114.82 lakhs and profit retention of 6,666.27 lakhs”)  
      3. **citation** in the format `<Balance Sheet 'Total Equity' = 18,252.53 lakhs>` or `<Balance Sheet 'Total Equity' = ₹ 182.53 Crores>`.  
 
-   – Summarize all major movements in one or two sentences, each ending with proper citation.  
+   - Summarize all major movements in one or two sentences, each ending with proper citation.  
      Example:  
      ```
      Total Equity = ₹ 182.53 Crores (↑ 55.92 % from ₹ 117.07 Crores in FY 2023-24 via bonus issue of ₹ 111.15 Crores and retained profit of ₹ 66.66 Crores). <Balance Sheet 'Total Equity' = ₹ 182.53 Crores; FY 2023-24 = ₹ 117.07 Crores> <Note 5>
      ```
 
-   – If any line is missing in the PDF, state exactly:  
+   - If any line is missing in the PDF, state exactly:  
      ```
      Insufficient data available for [that line item].
      ```
@@ -59,39 +59,39 @@ where “value” must exactly match the number + unit as shown in the PDF (e.g.
 ------------
 
 2. **detailed_ratio_analysis**  
-   – For each of the two FYs, calculate and interpret the following ratios. Always use the exact units the PDF shows; if numerator and denominator use different units (e.g., numerator in lakhs, denominator in crores), convert one side explicitly (show both) before dividing. Cite all sources in the original unit.  
+   - For each of the two FYs, calculate and interpret the following ratios. Always use the exact units the PDF shows; if numerator and denominator use different units (e.g., numerator in lakhs, denominator in crores), convert one side explicitly (show both) before dividing. Cite all sources in the original unit.  
 
    **Liquidity Ratios**  
    • Current Ratio = (Total Current Assets) / (Total Current Liabilities)  
-     – Cite “Total Current Assets” and “Total Current Liabilities” exactly as written (e.g., “14,154.03 lakhs”).  
-     – If the PDF lists “Total Current Liabilities = ₹ 100.30 Crores,” convert one side to match the other for calculation, but still quote each in its original unit:  
+     - Cite “Total Current Assets” and “Total Current Liabilities” exactly as written (e.g., “14,154.03 lakhs”).  
+     - If the PDF lists “Total Current Liabilities = ₹ 100.30 Crores,” convert one side to match the other for calculation, but still quote each in its original unit:  
        ```
        Total Current Assets = 14,154.03 lakhs (i.e. ₹ 141.5403 Crores). <Balance Sheet 'Total Current Assets' = 14,154.03 lakhs>  
        Total Current Liabilities = ₹ 100.30 Crores (i.e. 10,030.00 lakhs). <Balance Sheet 'Total Current Liabilities' = ₹ 100.30 Crores>  
        Current Ratio = (₹ 141.5403 Cr / ₹ 100.30 Cr) = 1.41x.  
        ```  
-       – Then report “FY 2024-25: 1.41x; FY 2023-24: 1.38x.”  
-       – Provide interpretation.  
+       - Then report “FY 2024-25: 1.41x; FY 2023-24: 1.38x.”  
+       - Provide interpretation.  
 
-   • Quick Ratio = (Total Current Assets – Inventories) / (Total Current Liabilities)  
-     – Cite “Inventories” exactly (e.g., “229.51 lakhs”).  
+   • Quick Ratio = (Total Current Assets - Inventories) / (Total Current Liabilities)  
+     - Cite “Inventories” exactly (e.g., “229.51 lakhs”).  
 
    **Solvency Ratios**  
    • Debt-to-Equity Ratio = (Total Debt) / (Total Equity)  
-     – If “Total Debt = 7,257.01 lakhs” and “Total Equity = ₹ 182.53 Crores,” show both:  
+     - If “Total Debt = 7,257.01 lakhs” and “Total Equity = ₹ 182.53 Crores,” show both:  
        ```
        Total Debt = 7,257.01 lakhs (i.e. ₹ 72.5701 Cr). <Balance Sheet 'Total Debt' = 7,257.01 lakhs>  
        Total Equity = ₹ 182.53 Crores (i.e. 18,252.53 lakhs). <Balance Sheet 'Total Equity' = ₹ 182.53 Crores>  
        Debt-to-Equity = (₹ 72.5701 Cr / ₹ 182.53 Cr) = 0.40x.
        ```  
-     – Report values for both FYs, then interpret.  
+     - Report values for both FYs, then interpret.  
 
    • Total Debt to Total Assets Ratio = (Total Debt) / (Total Assets)  
 
    • Interest Coverage Ratio = (EBITDA) / (Finance Costs)  
-     – If EBITDA is not explicitly listed, compute:  
-       EBITDA = (Revenue from Operations) – (Total Operating Expenses) + (Depreciation & Amortisation) + (Finance Costs) – (Other Income if negative)  
-     – Always cite each component’s original unit and then compute.  
+     - If EBITDA is not explicitly listed, compute:  
+       EBITDA = (Revenue from Operations) - (Total Operating Expenses) + (Depreciation & Amortisation) + (Finance Costs) - (Other Income if negative)  
+     - Always cite each component's original unit and then compute.  
 
    **Profitability Ratios**  
    • Net Profit Margin = (Profit for the year) / (Revenue from Operations)  
@@ -104,7 +104,7 @@ where “value” must exactly match the number + unit as shown in the PDF (e.g.
    • Trade Receivables Turnover = (Revenue from Operations) / (Trade Receivables)  
    • Trade Payables Turnover = (Cost of Services & Spare Parts Consumed) / (Trade Payables)  
 
-   – For each ratio, produce one JSON object with keys:
+   - For each ratio, produce one JSON object with keys:
      {
        "ratio_name": "Current Ratio",
        "calculation_formula": "Total Current Assets / Total Current Liabilities",
@@ -114,7 +114,7 @@ where “value” must exactly match the number + unit as shown in the PDF (e.g.
        },
        "interpretation_and_analysis": "The Current Ratio improved from 1.38x to 1.41x, indicating a healthier short-term liquidity position. <Balance Sheet 'Total Current Assets' = 14,154.03 lakhs; 'Total Current Liabilities' = 10,029.81 lakhs>"
      }
-   – If numerator or denominator is missing for any ratio, state exactly:
+   - If numerator or denominator is missing for any ratio, state exactly:
      Insufficient data available for [that ratio].
 
 ------------
@@ -125,63 +125,63 @@ where “value” must exactly match the number + unit as shown in the PDF (e.g.
    Use the same number + unit that the PDF shows. If you must convert units for clarity, show both original and converted values. Cite every number.
 
    1. **Operating Margin Stability**  
-      – Compare EBITDA margins:
+      - Compare EBITDA margins:
         “FY 2023-24 = 28.27%; FY 2024-25 = 29.39%. <Statement of Profit & Loss 'EBITDA' = 10,335.74 lakhs; 'Revenue from Operations' = 36,563.83 lakhs for FY 23-24; 'EBITDA' = 11,371.00 lakhs; 'Revenue' = 38,692.83 lakhs>.”
 
    2. **Other Income Scrutiny**  
-      – Identify “Profit on Sale of Investments” or other one-off items in Note 25.  
-      – Example: “Profit on Sale of Investments ↑ from 137.83 lakhs to 298.86 lakhs. <Note 25 'Profit on Sale of Investments' = 298.86 lakhs; FY 23-24 = 137.83 lakhs>.”
+      - Identify “Profit on Sale of Investments” or other one-off items in Note 25.  
+      - Example: “Profit on Sale of Investments ↑ from 137.83 lakhs to 298.86 lakhs. <Note 25 'Profit on Sale of Investments' = 298.86 lakhs; FY 23-24 = 137.83 lakhs>.”
 
    3. **Earnings Quality Assessment**  
-      – If the Cash Flow Statement is provided, compare “Profit for the year” vs “Net Cash from Operating Activities,” citing both.  
-      – Otherwise:
+      - If the Cash Flow Statement is provided, compare “Profit for the year” vs “Net Cash from Operating Activities,” citing both.  
+      - Otherwise:
         Insufficient data available for analysis (Cash Flow Statement not provided).
 
    4. **Working Capital Efficiency**  
-      – Compute DSO and DPO from turnover ratios; cite “Trade Receivables,” “Trade Payables,” and “Revenue from Operations” or “Cost of Services & Spare Parts” exactly as in PDF.  
-      – Example:
+      - Compute DSO and DPO from turnover ratios; cite “Trade Receivables,” “Trade Payables,” and “Revenue from Operations” or “Cost of Services & Spare Parts” exactly as in PDF.  
+      - Example:
         “Trade Receivables Turnover = 8.10x (38,692.83 lakhs / 4,776.68 lakhs). Days Sales Outstanding ~ 45 days. <Balance Sheet 'Trade Receivables' = 4,776.68 lakhs; 'Revenue from Operations' = 38,692.83 lakhs>.”
         “Trade Payables Turnover = 6.35x (19,493.48 lakhs / 3,069.90 lakhs). Days Payable Outstanding ~ 57 days. <Balance Sheet 'Trade Payables' = 3,069.90 lakhs; 'Cost of Services & Spare Parts' = 19,493.48 lakhs>.”
 
    5. **Related-Party Transactions & Leakage**  
-      – Cite “Director Remuneration” (Note 27), “Loans to Related Parties (Long-term)” (Note 16), and “Loans to Related Parties (Short-term)” (Note 22).  
-      – Example:
+      - Cite “Director Remuneration” (Note 27), “Loans to Related Parties (Long-term)” (Note 16), and “Loans to Related Parties (Short-term)” (Note 22).  
+      - Example:
         “Short-term loans to related parties = ₹ 29.94 Crores. <Note 22 'Loans to Related Parties' = 2,994.25 lakhs>.”
-      – State if any amount seems disproportionate or could indicate non–arm’s-length dealings.
+      - State if any amount seems disproportionate or could indicate non-arm's-length dealings.
 
    6. **Debt Service Capability**  
-      – Reuse the Interest Coverage Ratio above. Interpret whether EBITDA covers Finance Costs comfortably.  
-      – Cite exactly: “EBITDA = 11,371.00 lakhs; Finance Costs = 837.25 lakhs. <Statement of Profit & Loss 'EBITDA' = 11,371.00 lakhs; 'Finance Costs' = 837.25 lakhs>.”
+      - Reuse the Interest Coverage Ratio above. Interpret whether EBITDA covers Finance Costs comfortably.  
+      - Cite exactly: “EBITDA = 11,371.00 lakhs; Finance Costs = 837.25 lakhs. <Statement of Profit & Loss 'EBITDA' = 11,371.00 lakhs; 'Finance Costs' = 837.25 lakhs>.”
 
    7. **Reinvestment Strategy (CAPEX)**  
-      – From Note 14 (PPE schedule) and Note 29 (Depreciation), calculate:
+      - From Note 14 (PPE schedule) and Note 29 (Depreciation), calculate:
         Net PPE FY 23-24 = 5,994.36 lakhs; FY 24-25 = 6,214.91 lakhs. <Note 14>
         Depreciation = 1,003.46 lakhs. <Note 29>
-        Gross CAPEX ≈ Δ(Net PPE) + Depreciation = (6,214.91 – 5,994.36) + 1,003.46 = 1,224.01 lakhs.
-      – Cite all sources. Interpret whether CAPEX is maintenance-level or expansionary.
+        Gross CAPEX ≈ Δ(Net PPE) + Depreciation = (6,214.91 - 5,994.36) + 1,003.46 = 1,224.01 lakhs.
+      - Cite all sources. Interpret whether CAPEX is maintenance-level or expansionary.
 
    8. **Equity Changes & Promoters**  
-      – Cite “Paid-up Share Capital” (Note 4) and “Reserves and Surplus” (Note 5).  
-      – Example:
+      - Cite “Paid-up Share Capital” (Note 4) and “Reserves and Surplus” (Note 5).  
+      - Example:
         “Paid-up Share Capital ↑ from 111.20 lakhs to 11,611.20 lakhs via bonus issue of 11,114.82 lakhs from reserves. <Note 4 'Share Capital' = 11,611.20 lakhs; Note 5 'Reserves and Surplus' = 11,114.82 lakhs>.”
 
    9. **Non-Core Exposure**  
-      – Cite “Non-current Investments” (Note 15) and “Loans & Advances to Related Parties” (Note 16 & 22).  
-      – Example:
+      - Cite “Non-current Investments” (Note 15) and “Loans & Advances to Related Parties” (Note 16 & 22).  
+      - Example:
         “Non-current Investments = ₹ 94.81 Crores (9,480.84 lakhs), including ₹ 23.00 Crores in Traveltime City Bus Services and ₹ 53.19 Crores in Traveltime Mobility Services LLP. <Note 15>.”
         “Short-term loans to related parties = ₹ 29.94 Crores (2,994.25 lakhs). <Note 22>.”
-      – If “Contingent Liabilities” are not detailed, state:
+      - If “Contingent Liabilities” are not detailed, state:
         Insufficient data available for contingent liabilities details.
 
 ------------
 
 **Important Guidelines**  
-– **Preserve each value’s original unit** (lakhs, crores, or hybrid) exactly as shown. Do not normalize all numbers to a single unit.  
-– **When calculating a ratio with mismatched units**, convert one side explicitly (show both original and converted values) before dividing; still cite each in its original unit.  
-– **Inline citations must exactly mirror the PDF’s number + unit** (e.g., `<Balance Sheet 'Total Equity' = 18,252.53 lakhs>` or `<Balance Sheet 'Total Equity' = ₹ 182.53 Crores>`).  
-– **Never fabricate or assume** a value not visible in the PDF. If you cannot find a line, respond exactly: Insufficient data available for [that line].
-– **Maintain objective, professional tone.**  
-– **Output only valid JSON** matching the FinancialAnalysisSchema—no extra commentary or markdown.
+- **Preserve each value's original unit** (lakhs, crores, or hybrid) exactly as shown. Do not normalize all numbers to a single unit.  
+- **When calculating a ratio with mismatched units**, convert one side explicitly (show both original and converted values) before dividing; still cite each in its original unit.  
+- **Inline citations must exactly mirror the PDF's number + unit** (e.g., `<Balance Sheet 'Total Equity' = 18,252.53 lakhs>` or `<Balance Sheet 'Total Equity' = ₹ 182.53 Crores>`).  
+- **Never fabricate or assume** a value not visible in the PDF. If you cannot find a line, respond exactly: Insufficient data available for [that line].
+- **Maintain objective, professional tone.**  
+- **Output only valid JSON** matching the FinancialAnalysisSchema—no extra commentary or markdown.
 
 **Output Format (sample JSON schema):**  
 {{
@@ -233,7 +233,7 @@ where “value” must exactly match the number + unit as shown in the PDF (e.g.
           "income_and_profitability_summary": {
             "revenue_from_operations": {
               "value": "string # The financial value of revenue from operations for the current fiscal year in the comparison (e.g., 'approximately ₹120 Cr').",
-              "notes": "string # Notes on revenue from operations for the comparison period (e.g., 'up ~20%, reflecting growth in the company’s transport services business; may be due to new or expanded bus service contracts and higher ridership or billing rates')."
+              "notes": "string # Notes on revenue from operations for the comparison period (e.g., 'up ~20%, reflecting growth in the company's transport services business; may be due to new or expanded bus service contracts and higher ridership or billing rates')."
             },
             "other_income_notes": "string # Notes on 'Other Income' significance for the comparison period (e.g., 'present but not significant relative to core revenue').",
             "total_income_notes": "string # Overall trend notes for total income for the comparison period (e.g., 'thus rose in FY 2024-25').",
@@ -307,7 +307,7 @@ where “value” must exactly match the number + unit as shown in the PDF (e.g.
       },
       "related_party_transactions_and_leakage": {
         "assessment": "string # A high-level assessment of related-party transactions (e.g., 'does not indicate any alarming related-party transactions (RPTs) or “leakage” of funds').",
-        "details": "string # Detailed explanation and analysis of related-party transactions, including director remuneration and other transactions (e.g., 'The promoter-directors draw remuneration for their executive roles. The amount is reasonable relative to the company’s scale. Loans or advances to related parties are not significant.').",
+        "details": "string # Detailed explanation and analysis of related-party transactions, including director remuneration and other transactions (e.g., 'The promoter-directors draw remuneration for their executive roles. The amount is reasonable relative to the company's scale. Loans or advances to related parties are not significant.').",
         "data_availability": "string # Indicates if sufficient data was available for this analysis (e.g., 'sufficient_data_available').",
         "inferred_details": "string # Details inferred when direct data was insufficient (e.g., 'No material related-party loans or siphoning transactions are evident in the notes.')."
       },
@@ -325,7 +325,7 @@ where “value” must exactly match the number + unit as shown in the PDF (e.g.
       },
       "equity_changes_and_promoters": {
         "assessment": "string # A high-level assessment of equity changes and promoter actions (e.g., 'equity remained largely unchanged aside from profit retention, no new equity issuance was observed').",
-        "details": "string # Detailed explanation and analysis of equity changes and promoter actions (e.g., 'No new equity issuance was observed in FY 2024-25 - the paid-up share capital stayed at ₹1.11 Cr, and there was no infusion of fresh equity by the promoters or external investors. The promoters’ ownership stayed at 100%.').",
+        "details": "string # Detailed explanation and analysis of equity changes and promoter actions (e.g., 'No new equity issuance was observed in FY 2024-25 - the paid-up share capital stayed at ₹1.11 Cr, and there was no infusion of fresh equity by the promoters or external investors. The promoters' ownership stayed at 100%.').",
         "data_availability": "string # Indicates if sufficient data was available for this analysis (e.g., 'sufficient_data_available').",
         "inferred_details": "string # Details inferred when direct data was insufficient (e.g., 'It suggests that the promoters chose not to (or were unable to) bring additional equity.')."
       },
