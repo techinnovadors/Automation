@@ -1,13 +1,11 @@
-from pydantic import BaseModel, Field, AliasPath, ValidationError
-from typing import List, Dict, Optional, Any
-
-from typing import List, Optional, Dict, Any
 from pydantic import BaseModel, Field
+from typing import List, Dict, Optional, Any
 
 
 class Citation(BaseModel):
     source_name: str
     date: Optional[str] = None
+    source_url: Optional[str] = None
 
 
 class Headquarters(BaseModel):
@@ -60,7 +58,9 @@ class CompanyProfile(BaseModel):
     url: Optional[str] = None
     founding_date: Optional[str] = None
     headquarters: Optional[Headquarters] = None
-    core_products_services: List[ProductService] = Field(default_factory=list, alias="core_products_service_lines")
+    core_products_services: List[ProductService] = Field(
+        default_factory=list, alias="core_products_service_lines"
+    )
     key_metrics: List[KeyMetric] = Field(default_factory=list)
     market_segments: List[MarketSegment] = Field(default_factory=list)
     geographic_footprint: List[GeographicFootprintEntry] = Field(default_factory=list)
@@ -70,7 +70,7 @@ class CompanyProfile(BaseModel):
     other_relevant_info: Optional[Dict[str, Any]] = None
 
     class Config:
-        allow_population_by_field_name = True
+        validate_by_name = True
         populate_by_name = True
 
 
@@ -85,13 +85,30 @@ class CompetitorProfile(CompanyProfile):
     pass  # No new fields, just a semantic distinction for clarity
 
 
-# Represents a single criterion in the comparative analysis matrix
+# New nested model for competitor comparison value
+class CompetitorComparisonValue(BaseModel):
+    name: str
+    value: str
+
+
+# Updated ComparativeCriterion to match LLM output
 class ComparativeCriterion(BaseModel):
-    name: str  # e.g., "Product Lines", "Pricing Model", "Market Share"
-    target_value: Optional[str] = None
-    competitor_values: Dict[str, str] = Field(
-        default_factory=dict
-    )  # Competitor name -> value
+    name: str = Field(
+        validation_alias="criterion"
+    )  # Map 'criterion' from LLM output to 'name'
+    target_value: Optional[str] = Field(
+        None, validation_alias="target_company"
+    )  # Map 'target_company'
+    competitors: List[CompetitorComparisonValue] = Field(
+        default_factory=list
+    )  # Expect a list of the new model
+
+
+# New nested model for benchmarking best practices entry
+class BenchmarkEntry(BaseModel):
+    competitor_name: str
+    area_of_excellence: str
+    explanation: str
 
 
 # Schema for the overall comparative analysis results
@@ -102,9 +119,8 @@ class ComparativeAnalysisResult(BaseModel):
     key_weaknesses: List[str] = Field(default_factory=list)
     market_trends_opportunities: List[str] = Field(default_factory=list)
     threats_risks: List[str] = Field(default_factory=list)
-    benchmarking_best_practices: Dict[str, str] = Field(
-        default_factory=dict
-    )  # Competitor -> what they do well
+    # Updated to expect a list of BenchmarkEntry
+    benchmarking_best_practices: List[BenchmarkEntry] = Field(default_factory=list)
 
 
 # Schema for a single strategic recommendation

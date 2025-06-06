@@ -1,4 +1,5 @@
-from .schema import CompanyProfile
+from .schema import CompanyProfile, CompetitorProfile, ComparativeAnalysisResult
+
 # General JSON output constraint
 JSON_OUTPUT_FORMAT = """
 Your response MUST be a valid raw JSON object (or array, if applicable), adhering **strictly** to the Pydantic schema provided.
@@ -28,7 +29,7 @@ Extract the following fields:
 7. **Geographic Footprint** - Where the company operates or has a presence.
 8. **Unique Value Propositions** - What makes this company stand out from competitors?
 9. **Recent Developments** - Any events in the last 2-3 years such as funding rounds, acquisitions, new launches, or regulatory changes, with dates and sources.
-10. **Citations** - List of all data sources used, including source name (and date if applicable).
+10. **Citations** - List of all data sources used, including source name and URL (and date if applicable).
 11. **Optional**: Include `other_relevant_info` only if the content doesn't fit under other fields but is important.
 
 ⚠️ Strict Output Constraints:
@@ -51,7 +52,7 @@ Your goal is to identify both **direct competitors** (offer highly similar produ
 
 Consider the target company's core products, market segments, and unique value propositions to find relevant competitors.
 
-Provide the name and, if possible, the primary website URL for each competitor. Limit your response to the top 5-10 most relevant competitors.
+Provide the name and, if possible, the primary website URL for each competitor. Limit your response to the top 5 most relevant competitors.
 
 {JSON_OUTPUT_FORMAT}
 The JSON should be an array of `CompetitorInfo` objects.
@@ -59,22 +60,35 @@ The JSON should be an array of `CompetitorInfo` objects.
 
 # Prompt for the Competitor Details Agent
 COMPETITOR_DETAILS_PROMPT = f"""
-You are a highly specialized research agent focused on gathering comprehensive profile information for a single competitor company.
-Your task is to thoroughly research the company at the provided URL (if available) or based on its name, and extract the following details relevant for a competitive analysis:
-- **Company Name and URL**: The official name and primary website URL.
-- **Founding Date / Year Established**: When the company was founded.
-- **Headquarters / Geographic Footprint**: Primary location and main areas of operation.
-- **Core Products or Service Lines**: A list of their main offerings.
-- **Key Metrics**: Quantifiable data like estimated revenue, employee count, customer base, or any other relevant scale indicators. State the metric name and its value (e.g., "Revenue": "$500M").
-- **Market Segments**: Key customer types or industries they serve.
-- **Unique Value Propositions**: What makes them stand out? Their claimed differentiators.
-- **Recent Developments**: Notable news like mergers, acquisitions, funding rounds, major product launches, regulatory changes. Include dates if possible.
+You are a specialized research agent responsible for generating structured company profiles based on verified public data.
 
-For every piece of factual data, provide a clear citation including the source (e.g., website name), URL, and date if available. Prioritize official company sources (their website, press releases) and credible industry reports.
+Your task is to research the company at the provided URL and return its structured profile in valid JSON format using the provided schema.
+If a URL is not provided for a competitor, do your best to find their official website. If you cannot find reliable information, return an empty profile or fill only what you find.
+
+Extract the following fields:
+
+1. **Name and URL** - Legal entity name and main website.
+2. **Founding Date** - The year or full date when the company was legally established.
+3. **Headquarters** - Address, city, state, country, and postal code if available.
+4. **Core Products or Service Lines** - List of main products or services offered, with names, descriptions, and categories.
+5. **Key Metrics** - Quantifiable business indicators. **Prioritize financial data (e.g., revenue, net profit, valuation, funding rounds and amounts), operational metrics (e.g., employee count, active users, number of clients, fleet size, production capacity), and growth rates (e.g., year-over-year revenue growth).** State the metric name, its value, and a clear citation. Aim for specific numbers or ranges where possible.
+6. **Market Segments** - Who are the company's customers (e.g., corporates, government, consumers)?
+7. **Geographic Footprint** - Where the company operates or has a presence.
+8. **Unique Value Propositions** - What makes this company stand out from competitors?
+9. **Recent Developments** - Any events in the last 2-3 years such as funding rounds, acquisitions, new launches, or regulatory changes, with dates and sources.
+10. **Citations** - List of all data sources used, including source name and URL (and date if applicable).
+11. **Optional**: Include `other_relevant_info` only if the content doesn't fit under other fields but is important.
+
+⚠️ Strict Output Constraints:
+- You MUST only return a **raw JSON object** (no markdown, no HTML, no code blocks).
+- JSON must fully comply with the structure of the `CompanyProfile` schema below.
+- Include citations with every factual entry, prioritizing company websites and credible sources.
+- If a field has no data available, use `null` or omit it — do NOT guess.
 
 {JSON_OUTPUT_FORMAT}
-The JSON should strictly follow the `CompetitorProfile` schema.
-If a URL is not provided for a competitor, do your best to find their official website. If you cannot find reliable information, return an empty profile or fill only what you find.
+
+Use this Pydantic schema to format your response:
+{CompetitorProfile.model_json_schema()}
 """
 
 # Prompt for the Comparative Analysis Agent
@@ -99,6 +113,7 @@ Your task is to compare the target company against each competitor across releva
 {JSON_OUTPUT_FORMAT}
 The JSON should strictly follow the `ComparativeAnalysisResult` schema.
 Ensure all comparisons are clearly articulated and supported by information from the provided profiles.
+{ComparativeAnalysisResult.model_json_schema()}
 """
 
 # Prompt for the Recommendations Agent
