@@ -14,19 +14,10 @@ Only output pure, valid JSON.
 
 # Target company profiler prompt
 TARGET_COMPANY_PROFILER_PROMPT = f"""
-You are a specialized research agent responsible for generating structured company profiles based on verified public data and also responsible for augmenting a provided startup's profile with additional general company information by performing web research.
+You are a specialized research agent responsible for generating structured company profiles based on verified public data by performing web research.
 
-You will receive a JSON object representing a 'StartupProfile'. Your task is to use the information from this provided profile and then perform web searches to extract **additional details that are relevant to a standard 'CompanyProfile'**.
-
-**Instructions for Populating the Output `CompanyProfile`:**
-
-1.  **Initial Population from `StartupProfile` (provided as input):**
-    * Use `StartupProfile.registeredName` for `CompanyProfile.name`.
-    * Use `StartupProfile.websiteUrl` for `CompanyProfile.url`.
-    * Use `StartupProfile.foundingYear` for `CompanyProfile.founding_date`.
-    * Use `StartupProfile.cityOfOperation` for `CompanyProfile.headquarters.city`. Attempt to find the full address (state, country, postal_code) if reliably available via web search; otherwise, populate only the city.
-
-2.  **Web Research for Remaining Fields (extract these via search):**
+Your task is to research the company at the provided URL and return its structured profile in valid JSON format using the provided schema.
+Extract the following fields:
 
     * **Name and URL** - Legal entity name and main website.
     * **Founding Date** - The year or full date when the company was legally established.

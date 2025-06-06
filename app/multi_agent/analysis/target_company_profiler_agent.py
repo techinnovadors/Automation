@@ -19,9 +19,6 @@ class TargetCompanyProfilerAgent:
             name="target_company_profiler_agent",
             instruction=TARGET_COMPANY_PROFILER_PROMPT,
             tools=[google_search],  # This agent needs web search
-            generate_content_config=types.GenerateContentConfig(
-                max_output_tokens=50000,  # Sufficient tokens for detailed CompanyProfile
-            ),
         )
 
     async def call(
