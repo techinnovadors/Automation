@@ -38,9 +38,7 @@ class TargetCompanyProfilerAgent:
         """
         # Pass the entire StartupProfile as input data to the agent
         # The prompt is designed to instruct the LLM to parse this and then research
-        input_data = (
-            target_profile.model_dump()
-        )  # Convert Pydantic model to dict for input
+        input_data = { "company_url": target_profile.websiteUrl }  # Convert Pydantic model to dict for input
 
         logger.info(
             f"TargetCompanyProfilerAgent: Augmenting StartupProfile for {target_profile.registeredName}"
