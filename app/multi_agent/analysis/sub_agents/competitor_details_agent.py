@@ -1,16 +1,17 @@
-from typing import List, Optional
+import logging
 import asyncio
+from typing import List, Optional
 
 from google.adk import Agent
 from google.adk.tools import google_search
-import logging
+from google.genai import types
 
-from ..utils import MODEL, call_single_agent, save_json_to_file, MAX_CONCURRENT_PROFILES
+from ..utils import MODEL, call_single_agent, save_json_to_file
 from ..schema import CompetitorInfo, CompetitorProfile
 from ..prompts import COMPETITOR_DETAILS_PROMPT
 
-logger = logging.getLogger(__name__)
-
+logger = logging.getLogger("uvicorn")
+MAX_CONCURRENT_PROFILES = 2
 
 class CompetitorDetailsAgent:
     def __init__(self):
@@ -18,6 +19,9 @@ class CompetitorDetailsAgent:
             model=MODEL,
             name="competitor_details_agent",
             instruction=COMPETITOR_DETAILS_PROMPT,
+            generate_content_config=types.GenerateContentConfig(
+                max_output_tokens=50000,
+            ),
             tools=[google_search],  # This agent needs web search
         )
 

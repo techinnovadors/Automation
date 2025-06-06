@@ -8,7 +8,7 @@ from ..utils import MODEL, call_single_agent
 from ..schema import CompanyProfile, CompetitorProfile, ComparativeAnalysisResult
 from ..prompts import COMPARATIVE_ANALYSIS_PROMPT
 
-logger = logging.getLogger(__name__)
+logger = logging.getLogger("uvicorn")
 
 
 class ComparativeAnalysisAgent:
@@ -19,9 +19,9 @@ class ComparativeAnalysisAgent:
             instruction=COMPARATIVE_ANALYSIS_PROMPT,
             tools=[],  # No tools needed for this agent, it processes internal data
             generate_content_config=types.GenerateContentConfig(
-                response_mime_type="application/json",
-                max_output_tokens=50000,
+                max_output_tokens=60000,
             ),
+            output_schema=ComparativeAnalysisResult,
         )
 
     async def call(

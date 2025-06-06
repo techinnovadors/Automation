@@ -10,7 +10,7 @@ from app.agents.pdf_extractor.prompt import PDF_EXTRACTOR_PROMPT
 from app.agents.pdf_extractor.models import FinancialAnalysisSchema
 from app.services.generate_report import generate_pdf
 
-logger = logging.getLogger(__name__)
+logger = logging.getLogger("uvicorn")
 
 router = APIRouter()
 

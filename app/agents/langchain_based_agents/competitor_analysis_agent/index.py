@@ -10,7 +10,7 @@ from app.core.config import settings
 
 from .prompt import competitive_analysis_prompt_text, company_websearch_prompt_text
 
-logger = logging.getLogger(__name__)
+logger = logging.getLogger("uvicorn")
 
 # Create the agent
 

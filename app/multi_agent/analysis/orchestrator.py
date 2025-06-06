@@ -17,7 +17,7 @@ from .schema import (
 )
 from .utils import save_json_to_file
 
-logger = logging.getLogger(__name__)
+logger = logging.getLogger("uvicorn")
 
 BASE_OUTPUT_DIR = "/Users/apple/work/Antennae/Automation/outputs/example"
 

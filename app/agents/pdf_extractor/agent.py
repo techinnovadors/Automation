@@ -14,7 +14,7 @@ from app.services.pdf_processor import process_uploaded_pdf
 from .prompt import PDF_EXTRACTOR_DESCRIPTION
 from .models import FinancialAnalysisSchema
 
-logger = logging.getLogger(__name__)
+logger = logging.getLogger("uvicorn")
 
 MODEL = "gemini-2.5-flash-preview-05-20"
 

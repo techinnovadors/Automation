@@ -30,7 +30,7 @@ from .prompt import prompt_text, competitive_analysis_prompt_text
 MODEL = "gemini-2.5-pro-preview-05-06"
 APP_NAME = "CompanyWebSearchAgent"
 
-logger = logging.getLogger(__name__)
+logger = logging.getLogger("uvicorn")
 
 
 def _clean_json_from_text(text: str) -> str:

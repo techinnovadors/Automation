@@ -5,7 +5,7 @@ from ..schema import FullCompetitiveAnalysisReport
 from ..prompts import EXECUTIVE_SUMMARY_PROMPT
 from ..utils import MODEL, call_single_agent
 
-logger = logging.getLogger(__name__)
+logger = logging.getLogger("uvicorn")
 
 
 class ExecutiveSummaryAgent:

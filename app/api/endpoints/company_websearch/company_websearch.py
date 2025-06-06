@@ -5,7 +5,7 @@ from fastapi import APIRouter, Form, HTTPException
 
 from app.multi_agent.analysis.orchestrator import OrchestratorAgent
 
-logger = logging.getLogger(__name__)
+logger = logging.getLogger("uvicorn")
 
 router = APIRouter()
 
