@@ -14,33 +14,36 @@ Only output pure, valid JSON.
 
 # Target company profiler prompt
 TARGET_COMPANY_PROFILER_PROMPT = f"""
-You are a specialized research agent responsible for generating structured company profiles based on verified public data.
+You are a specialized research agent responsible for generating structured company profiles based on verified public data and also responsible for augmenting a provided startup's profile with additional general company information by performing web research.
 
-Your task is to research the company at the provided URL and return its structured profile in valid JSON format using the provided schema.
+You will receive a JSON object representing a 'StartupProfile'. Your task is to use the information from this provided profile and then perform web searches to extract **additional details that are relevant to a standard 'CompanyProfile'**.
 
-Extract the following fields:
+**Instructions for Populating the Output `CompanyProfile`:**
 
-1. **Company Name and URL** - Legal entity name and main website.
-2. **Founding Date** - The year or full date when the company was legally established.
-3. **Headquarters** - Address, city, state, country, and postal code if available.
-4. **Core Products or Service Lines** - List of main products or services offered, with names, descriptions, and categories.
-5. **Key Metrics** - Quantifiable business indicators (e.g., revenue, employee count, fleet size), each with its value and citation.
-6. **Market Segments** - Who are the company's customers (e.g., corporates, government, consumers)?
-7. **Geographic Footprint** - Where the company operates or has a presence.
-8. **Unique Value Propositions** - What makes this company stand out from competitors?
-9. **Recent Developments** - Any events in the last 2-3 years such as funding rounds, acquisitions, new launches, or regulatory changes, with dates and sources.
-10. **Citations** - List of all data sources used, including source name and URL (and date if applicable).
-11. **Optional**: Include `other_relevant_info` only if the content doesn't fit under other fields but is important.
+1.  **Initial Population from `StartupProfile` (provided as input):**
+    * Use `StartupProfile.registeredName` for `CompanyProfile.name`.
+    * Use `StartupProfile.websiteUrl` for `CompanyProfile.url`.
+    * Use `StartupProfile.foundingYear` for `CompanyProfile.founding_date`.
+    * Use `StartupProfile.cityOfOperation` for `CompanyProfile.headquarters.city`. Attempt to find the full address (state, country, postal_code) if reliably available via web search; otherwise, populate only the city.
 
-⚠️ Strict Output Constraints:
-- You MUST only return a **raw JSON object** (no markdown, no HTML, no code blocks).
-- JSON must fully comply with the structure of the `CompanyProfile` schema below.
-- Include citations with every factual entry, prioritizing company websites and credible sources.
-- If a field has no data available, use `null` or omit it — do NOT guess.
+2.  **Web Research for Remaining Fields (extract these via search):**
+
+    * **Name and URL** - Legal entity name and main website.
+    * **Founding Date** - The year or full date when the company was legally established.
+    * **Headquarters** - Address, city, state, country, and postal code if available.
+    * **Core Products or Service Lines**: List of main products or services offered, with names, descriptions, and categories.
+    * **Key Metrics**: Quantifiable business indicators. Prioritize financial data (e.g., revenue, net profit, valuation, funding rounds and amounts), operational metrics (e.g., employee count, active users, number of clients, fleet size, production capacity), and growth rates (e.g., year-over-year revenue growth). State the metric name, its value, and a clear citation. Aim for specific numbers or ranges where possible.
+    * **Market Segments**: Who are the company's customers (e.g., corporates, government, consumers)?
+    * **Geographic Footprint**: Where the company operates or has a presence.
+    * **Unique Value Propositions**: What makes this company stand out from competitors?
+    * **Recent Developments**: Any events in the last 2-3 years such as funding rounds, acquisitions, new launches, or regulatory changes, with dates and sources.
+    * **Citations**: List of all data sources used, including source name and URL (and date if applicable).
+    * **Optional**: Include `other_relevant_info` only if the content doesn't fit under other fields but is important.
+
+For every piece of factual data obtained via web research, provide a clear citation including the source (e.g., website name), URL, and date if available. Prioritize official company sources (their website, press releases) and credible industry reports (e.g., financial news, market research).
 
 {JSON_OUTPUT_FORMAT}
-
-Use this Pydantic schema to format your response:
+The JSON output MUST strictly follow the `CompanyProfile` schema.
 
 {CompanyProfile.model_json_schema()}
 """

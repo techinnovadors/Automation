@@ -8,12 +8,12 @@ from .sub_agents import (
     CompetitorDetailsAgent,
     ComparativeAnalysisAgent,
     ExecutiveSummaryAgent,
-    TargetCompanyProfilerAgent,
     profile_competitors_in_parallel,
 )
 
 from .schema import (
     FullCompetitiveAnalysisReport,
+    CompanyProfile,
 )
 from .utils import save_json_to_file
 
@@ -25,7 +25,6 @@ BASE_OUTPUT_DIR = "/Users/apple/work/Antennae/Automation/outputs/example"
 # The Orchestrator Agent that manages the workflow
 class OrchestratorAgent:
     def __init__(self):
-        self.target_profiler = TargetCompanyProfilerAgent()
         self.competitor_identifier = CompetitorIdentificationAgent()
         self.competitor_details_agent = CompetitorDetailsAgent()
         self.comparative_analyser = ComparativeAnalysisAgent()
@@ -33,7 +32,7 @@ class OrchestratorAgent:
         self.executive_summary_agent = ExecutiveSummaryAgent()
 
     async def run_analysis(
-        self, company_url: str, user_id: str, session_id: str
+        self, target_profile: CompanyProfile, user_id: str, session_id: str
     ) -> FullCompetitiveAnalysisReport:
         """
         Orchestrates the entire competitive analysis process by calling specialized agents sequentially.
@@ -44,14 +43,9 @@ class OrchestratorAgent:
         os.makedirs(output_dir, exist_ok=True)
 
         logger.info(
-            f"Orchestrator: Starting analysis for {company_url}. Outputs will be saved to '{output_dir}'"
+            f"Orchestrator: Starting analysis for {target_profile.name}. Outputs will be saved to '{output_dir}'"
         )
 
-        # 1. Profile Target Company
-        logger.info("Orchestrator: Calling TargetCompanyProfilerAgent...")
-        target_profile = await self.target_profiler.call(
-            company_url, user_id, f"{session_id}-target-profile"
-        )
         save_json_to_file(target_profile, "01_target_profile.json", output_dir)
         logger.info(f"Orchestrator: Target company profiled: {target_profile.name}")
         # target_profile_file_path = os.path.join(

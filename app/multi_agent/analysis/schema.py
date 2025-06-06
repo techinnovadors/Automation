@@ -132,6 +132,63 @@ class Recommendation(BaseModel):
     kpis: List[str] = Field(default_factory=list)
 
 
+class FundingRound(BaseModel):
+    fundsRaised: str  # Assuming string as it's "100" which could be "100M" etc.
+    investorName: str
+    mailId: Optional[str] = None
+    monthYear: str  # e.g., "06/2022"
+    phoneNumber: Optional[str] = None
+    shareholding: str  # "10" (as string to accommodate percentages later maybe)
+    stage: str  # e.g., "Seed"
+
+
+class TeamMember(BaseModel):
+    contactNumber: Optional[str] = None
+    coreStrength: str
+    designation: str
+    email: Optional[str] = None
+    linkedinUrl: Optional[str] = None
+    location: str
+    name: str
+    pastExperience: str  # Assuming string as it's "8"
+    qualifications: str
+    teamSize: str  # Assuming string as "15"
+
+
+class TractionMetrics(BaseModel):
+    clients: str
+    ebitda: str
+    gmv: str
+    growth: str
+    mau: str
+    revenue: str
+
+
+class StartupProfile(BaseModel):
+    cityOfOperation: str
+    dilution: str  # Assuming string as "15" might imply percentage later
+    domicile: str
+    equityOffered: str  # Assuming string as "15" might imply percentage later
+    founderLinkedinUrls: List[str] = Field(default_factory=list)
+    foundingYear: str  # "2021" as string
+    fundingAmount: str  # "500" as string (could be "500M" etc.)
+    marketType: str
+    preMoneyValuation: str  # "3000" as string
+    previousFundingRounds: List[FundingRound] = Field(default_factory=list)
+    revenueARR: str  # "500000" as string (to accommodate currency/units)
+    registeredName: str
+    revenueModel: str
+    sector: List[str] = Field(default_factory=list)
+    team: List[TeamMember] = Field(default_factory=list)
+    traction: Dict[str, TractionMetrics]  # Dynamically named keys like "m1", "m2"
+    useOfFunds: str
+    websiteUrl: str
+
+    class Config:
+        validate_by_name = True
+        populate_by_name = True
+
+
 # The comprehensive final report schema
 class FullCompetitiveAnalysisReport(BaseModel):
     target_company_profile: CompanyProfile
