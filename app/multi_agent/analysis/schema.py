@@ -152,7 +152,7 @@ class TeamMember(BaseModel):
     name: str
     pastExperience: str  # Assuming string as it's "8"
     qualifications: str
-    teamSize: str  # Assuming string as "15"
+    # teamSize: str  # Assuming string as "15"
 
 
 class TractionMetrics(BaseModel):
@@ -166,16 +166,16 @@ class TractionMetrics(BaseModel):
 
 class StartupProfile(BaseModel):
     cityOfOperation: str
-    dilution: str  # Assuming string as "15" might imply percentage later
+    dilution: Optional[str] = None  # Assuming string as "15" might imply percentage later
     domicile: str
-    equityOffered: str  # Assuming string as "15" might imply percentage later
+    equityOffered: Optional[str] = None  # Assuming string as "15" might imply percentage later
     founderLinkedinUrls: List[str] = Field(default_factory=list)
     foundingYear: str  # "2021" as string
     fundingAmount: str  # "500" as string (could be "500M" etc.)
     marketType: str
     preMoneyValuation: str  # "3000" as string
     previousFundingRounds: List[FundingRound] = Field(default_factory=list)
-    revenueARR: str  # "500000" as string (to accommodate currency/units)
+    revenueARR: Optional[str] = None  # "500000" as string (to accommodate currency/units)
     registeredName: str
     revenueModel: str
     sector: List[str] = Field(default_factory=list)
