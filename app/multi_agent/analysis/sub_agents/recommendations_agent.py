@@ -7,7 +7,7 @@ from ..utils import MODEL, call_single_agent
 from ..schema import CompanyProfile, ComparativeAnalysisResult, Recommendation
 from ..prompts import RECOMMENDATIONS_PROMPT
 
-logger = logging.getLogger("uvicorn")
+logger = logging.getLogger(__name__)
 
 
 class RecommendationsAgent:

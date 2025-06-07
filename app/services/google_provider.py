@@ -12,7 +12,7 @@ from google.genai.errors import ServerError, ClientError, APIError
 from app.core.config import settings
 from app.services.models import GeminiRequestParams, GeminiResponseParams
 
-logger = logging.getLogger("uvicorn")
+logger = logging.getLogger(__name__)
 
 
 class GoogleProviderClient:

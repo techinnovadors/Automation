@@ -1,4 +1,10 @@
-from .schema import CompanyProfile, CompetitorProfile, ComparativeAnalysisResult, ExecutiveSummary
+from .schema import (
+    CompanyProfile,
+    CompetitorInfo,
+    CompetitorProfile,
+    ComparativeAnalysisResult,
+    ExecutiveSummary,
+)
 import json
 
 # General JSON output constraint
@@ -47,10 +53,11 @@ Your goal is to identify both **direct competitors** (offer highly similar produ
 
 Consider the target company's core products, market segments, and unique value propositions to find relevant competitors.
 
-Provide the name and the primary website URL for each competitor. Limit your response to the top 5 most relevant competitors.
+Provide the name and the primary website URL for each competitor. Limit your response to the top 5-10 most relevant competitors.
 
 {JSON_OUTPUT_FORMAT}
 The JSON should be an array of `CompetitorInfo` objects.
+{json.dumps(CompetitorInfo.model_json_schema())}
 """
 
 # Prompt for the Competitor Details Agent

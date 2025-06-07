@@ -77,7 +77,7 @@ class CompanyProfile(BaseModel):
 # Schema for identifying a competitor (name and optional URL)
 class CompetitorInfo(BaseModel):
     name: str
-    url: Optional[str] = None
+    url: str
 
 
 # Schema for a competitor's detailed profile (inherits from CompanyProfile)
@@ -122,6 +122,8 @@ class ComparativeAnalysisResult(BaseModel):
     # Updated to expect a list of BenchmarkEntry
     benchmarking_best_practices: List[BenchmarkEntry] = Field(default_factory=list)
 
+class ComparativeAnalysisResultWrapper(BaseModel):
+    comparative_analysis: ComparativeAnalysisResult
 
 # Schema for a single strategic recommendation
 class Recommendation(BaseModel):

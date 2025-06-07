@@ -9,7 +9,7 @@ from google.adk.sessions import InMemorySessionService
 from google.adk.runners import Runner
 from google.genai import types
 
-logger = logging.getLogger("uvicorn")
+logger = logging.getLogger(__name__)
 
 APP_NAME = "MultiAgentCompetitiveAnalysis"
 MODEL = "gemini-2.5-flash-preview-05-20"

@@ -8,7 +8,6 @@ from .sub_agents import (
     CompetitorDetailsAgent,
     ComparativeAnalysisAgent,
     ExecutiveSummaryAgent,
-    profile_competitors_in_parallel,
 )
 
 from .schema import (
@@ -17,7 +16,7 @@ from .schema import (
 )
 from .utils import save_json_to_file
 
-logger = logging.getLogger("uvicorn")
+logger = logging.getLogger(__name__)
 
 BASE_OUTPUT_DIR = "/Users/apple/work/Antennae/Automation/outputs/example"
 
@@ -78,12 +77,11 @@ class OrchestratorAgent:
         #     )
         # 3. Profile Each Competitor
         # For simplicity, profiling sequentially. In a real application, this could be parallelized.
-        competitor_profiles = await profile_competitors_in_parallel(
+        competitor_profiles = await self.competitor_details_agent.profile_competitors_in_parallel(
             competitor_infos,
-            self.competitor_details_agent,
             user_id,
-            session_id,
-            output_dir,
+            session_prefix=session_id,
+            output_dir=output_dir,
         )
 
         logger.info(
@@ -109,7 +107,7 @@ class OrchestratorAgent:
         # 4. Perform Comparative Analysis
         logger.info("Orchestrator: Calling ComparativeAnalysisAgent...")
         comparative_analysis = await self.comparative_analyser.call(
-            target_profile, competitor_profiles, user_id, f"{session_id}-compare"
+            competitor_profiles, user_id, f"{session_id}-compare"
         )
         save_json_to_file(
             comparative_analysis, "04_comparative_analysis.json", output_dir
