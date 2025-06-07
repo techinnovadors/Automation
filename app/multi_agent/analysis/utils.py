@@ -9,7 +9,7 @@ from google.adk.sessions import InMemorySessionService
 from google.adk.runners import Runner
 from google.genai import types
 
-logger = logging.getLogger("uvicorn")
+logger = logging.getLogger(__name__)
 
 APP_NAME = "MultiAgentCompetitiveAnalysis"
 MODEL = "gemini-2.5-flash-preview-05-20"
@@ -109,9 +109,8 @@ async def call_single_agent(
     Helper function to call a single agent, manage its session, and parse its JSON output.
     """
     logger.info(f"Calling agent '{agent_instance.name}'")
-    session_service = (
-        InMemorySessionService()
-    )  # Each sub-agent gets its own session service for isolated runs
+    session_service = InMemorySessionService()
+
     runner = Runner(
         agent=agent_instance, app_name=APP_NAME, session_service=session_service
     )

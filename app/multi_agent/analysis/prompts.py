@@ -1,4 +1,11 @@
-from .schema import CompanyProfile, CompetitorProfile, ComparativeAnalysisResult
+from .schema import (
+    CompanyProfile,
+    CompetitorInfo,
+    CompetitorProfile,
+    ComparativeAnalysisResult,
+    ExecutiveSummary,
+)
+import json
 
 # General JSON output constraint
 JSON_OUTPUT_FORMAT = """
@@ -14,35 +21,29 @@ Only output pure, valid JSON.
 
 # Target company profiler prompt
 TARGET_COMPANY_PROFILER_PROMPT = f"""
-You are a specialized research agent responsible for generating structured company profiles based on verified public data.
+You are a specialized research agent responsible for generating structured company profiles based on verified public data by performing web research.
 
 Your task is to research the company at the provided URL and return its structured profile in valid JSON format using the provided schema.
-
 Extract the following fields:
 
-1. **Company Name and URL** - Legal entity name and main website.
-2. **Founding Date** - The year or full date when the company was legally established.
-3. **Headquarters** - Address, city, state, country, and postal code if available.
-4. **Core Products or Service Lines** - List of main products or services offered, with names, descriptions, and categories.
-5. **Key Metrics** - Quantifiable business indicators (e.g., revenue, employee count, fleet size), each with its value and citation.
-6. **Market Segments** - Who are the company's customers (e.g., corporates, government, consumers)?
-7. **Geographic Footprint** - Where the company operates or has a presence.
-8. **Unique Value Propositions** - What makes this company stand out from competitors?
-9. **Recent Developments** - Any events in the last 2-3 years such as funding rounds, acquisitions, new launches, or regulatory changes, with dates and sources.
-10. **Citations** - List of all data sources used, including source name and URL (and date if applicable).
-11. **Optional**: Include `other_relevant_info` only if the content doesn't fit under other fields but is important.
+    * **Name and URL** - Legal entity name and main website.
+    * **Founding Date** - The year or full date when the company was legally established.
+    * **Headquarters** - Address, city, state, country, and postal code if available.
+    * **Core Products or Service Lines**: List of main products or services offered, with names, descriptions, and categories.
+    * **Key Metrics**: Quantifiable business indicators. Prioritize financial data (e.g., revenue, net profit, valuation, funding rounds and amounts), operational metrics (e.g., employee count, active users, number of clients, fleet size, production capacity), and growth rates (e.g., year-over-year revenue growth). State the metric name, its value, and a clear citation. Aim for specific numbers or ranges where possible.
+    * **Market Segments**: Who are the company's customers (e.g., corporates, government, consumers)?
+    * **Geographic Footprint**: Where the company operates or has a presence.
+    * **Unique Value Propositions**: What makes this company stand out from competitors?
+    * **Recent Developments**: Any events in the last 2-3 years such as funding rounds, acquisitions, new launches, or regulatory changes, with dates and sources.
+    * **Citations**: List of all data sources used, including source name and URL (and date if applicable).
+    * **Optional**: Include `other_relevant_info` only if the content doesn't fit under other fields but is important.
 
-⚠️ Strict Output Constraints:
-- You MUST only return a **raw JSON object** (no markdown, no HTML, no code blocks).
-- JSON must fully comply with the structure of the `CompanyProfile` schema below.
-- Include citations with every factual entry, prioritizing company websites and credible sources.
-- If a field has no data available, use `null` or omit it — do NOT guess.
+For every piece of factual data obtained via web research, provide a clear citation including the source (e.g., website name), URL, and date if available. Prioritize official company sources (their website, press releases) and credible industry reports (e.g., financial news, market research).
 
 {JSON_OUTPUT_FORMAT}
+The JSON output MUST strictly follow the `CompanyProfile` schema.
 
-Use this Pydantic schema to format your response:
-
-{CompanyProfile.model_json_schema()}
+{json.dumps(CompanyProfile.model_json_schema())}
 """
 
 # Prompt for the Competitor Identification Agent
@@ -52,10 +53,11 @@ Your goal is to identify both **direct competitors** (offer highly similar produ
 
 Consider the target company's core products, market segments, and unique value propositions to find relevant competitors.
 
-Provide the name and, if possible, the primary website URL for each competitor. Limit your response to the top 5 most relevant competitors.
+Provide the name and the primary website URL for each competitor. Limit your response to the top 5-10 most relevant competitors.
 
 {JSON_OUTPUT_FORMAT}
 The JSON should be an array of `CompetitorInfo` objects.
+{json.dumps(CompetitorInfo.model_json_schema())}
 """
 
 # Prompt for the Competitor Details Agent
@@ -163,5 +165,6 @@ Provide a compelling executive summary (1-2 paragraphs) that covers:
 This summary should be informative enough for a busy executive to grasp the essence of the entire report without needing to read it in full.
 
 {JSON_OUTPUT_FORMAT}
-The JSON should be a single string (e.g., "This is the executive summary content.").
+The JSON should strictly follow the `ExecutiveSummary` schema.
+{ExecutiveSummary.model_json_schema()}
 """

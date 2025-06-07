@@ -28,5 +28,8 @@ class CompetitorIdentificationAgent:
             COMPETITOR_IDENTIFICATION_PROMPT,
             input_data,
         )
-        return [CompetitorInfo.model_validate(item) for item in json_response]
-
+        return [
+            CompetitorInfo.model_validate(item)
+            for item in json_response
+            if item.get("url")
+        ]

@@ -5,10 +5,10 @@ import logging
 from google.genai import types
 
 from ..utils import MODEL, call_single_agent
-from ..schema import CompanyProfile, CompetitorProfile, ComparativeAnalysisResult
+from ..schema import CompetitorProfile, ComparativeAnalysisResult, ComparativeAnalysisResultWrapper
 from ..prompts import COMPARATIVE_ANALYSIS_PROMPT
 
-logger = logging.getLogger("uvicorn")
+logger = logging.getLogger(__name__)
 
 
 class ComparativeAnalysisAgent:
@@ -21,21 +21,22 @@ class ComparativeAnalysisAgent:
             generate_content_config=types.GenerateContentConfig(
                 max_output_tokens=60000,
             ),
-            output_schema=ComparativeAnalysisResult,
+            output_schema=ComparativeAnalysisResultWrapper,
+            output_key="comparative_analysis",
         )
 
     async def call(
         self,
-        target_profile: CompanyProfile,
         competitor_profiles: List[CompetitorProfile],
         user_id: str,
         session_id: str,
     ) -> ComparativeAnalysisResult:
         input_data = {
-            "target_company_profile": target_profile.model_dump(),
             "competitor_profiles": [p.model_dump() for p in competitor_profiles],
         }
         json_response = await call_single_agent(
             self.agent, user_id, session_id, COMPARATIVE_ANALYSIS_PROMPT, input_data
         )
+
+        logger.info(f"ComparativeAnalysisAgent Response: {json_response}")
         return ComparativeAnalysisResult.model_validate(json_response)

@@ -77,7 +77,7 @@ class CompanyProfile(BaseModel):
 # Schema for identifying a competitor (name and optional URL)
 class CompetitorInfo(BaseModel):
     name: str
-    url: Optional[str] = None
+    url: str
 
 
 # Schema for a competitor's detailed profile (inherits from CompanyProfile)
@@ -122,6 +122,8 @@ class ComparativeAnalysisResult(BaseModel):
     # Updated to expect a list of BenchmarkEntry
     benchmarking_best_practices: List[BenchmarkEntry] = Field(default_factory=list)
 
+class ComparativeAnalysisResultWrapper(BaseModel):
+    comparative_analysis: ComparativeAnalysisResult
 
 # Schema for a single strategic recommendation
 class Recommendation(BaseModel):
@@ -131,6 +133,65 @@ class Recommendation(BaseModel):
     estimated_resources: Optional[str] = None
     kpis: List[str] = Field(default_factory=list)
 
+
+class FundingRound(BaseModel):
+    fundsRaised: str  # Assuming string as it's "100" which could be "100M" etc.
+    investorName: str
+    mailId: Optional[str] = None
+    monthYear: str  # e.g., "06/2022"
+    phoneNumber: Optional[str] = None
+    shareholding: str  # "10" (as string to accommodate percentages later maybe)
+    stage: str  # e.g., "Seed"
+
+
+class TeamMember(BaseModel):
+    contactNumber: Optional[str] = None
+    coreStrength: str
+    designation: str
+    email: Optional[str] = None
+    linkedinUrl: Optional[str] = None
+    location: str
+    name: str
+    pastExperience: str  # Assuming string as it's "8"
+    qualifications: str
+    # teamSize: str  # Assuming string as "15"
+
+
+class TractionMetrics(BaseModel):
+    clients: str
+    ebitda: str
+    gmv: str
+    growth: str
+    mau: str
+    revenue: str
+
+
+class StartupProfile(BaseModel):
+    cityOfOperation: str
+    dilution: Optional[str] = None  # Assuming string as "15" might imply percentage later
+    domicile: str
+    equityOffered: Optional[str] = None  # Assuming string as "15" might imply percentage later
+    founderLinkedinUrls: List[str] = Field(default_factory=list)
+    foundingYear: str  # "2021" as string
+    fundingAmount: str  # "500" as string (could be "500M" etc.)
+    marketType: str
+    preMoneyValuation: str  # "3000" as string
+    previousFundingRounds: List[FundingRound] = Field(default_factory=list)
+    revenueARR: Optional[str] = None  # "500000" as string (to accommodate currency/units)
+    registeredName: str
+    revenueModel: str
+    sector: List[str] = Field(default_factory=list)
+    team: List[TeamMember] = Field(default_factory=list)
+    traction: Dict[str, TractionMetrics]  # Dynamically named keys like "m1", "m2"
+    useOfFunds: str
+    websiteUrl: str
+
+    class Config:
+        validate_by_name = True
+        populate_by_name = True
+
+class ExecutiveSummary(BaseModel):
+    summary: str
 
 # The comprehensive final report schema
 class FullCompetitiveAnalysisReport(BaseModel):

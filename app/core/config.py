@@ -26,8 +26,8 @@ class Settings(BaseSettings):
     GOOGLE_CLOUD_PROJECT: str | None = None
     GOOGLE_CLOUD_LOCATION: str | None = None
 
-    # Tavily settings
-    TAVILY_API_KEY: str
+    # # Tavily settings
+    # TAVILY_API_KEY: str
 
     model_config = SettingsConfigDict(env_file=".env", case_sensitive=True)
 

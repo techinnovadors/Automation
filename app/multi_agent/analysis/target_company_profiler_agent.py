@@ -4,9 +4,9 @@ from google.adk import Agent
 from google.adk.tools import google_search
 from google.genai import types
 
-from ..utils import MODEL, call_single_agent  # Import common utilities
-from ..schema import CompanyProfile, StartupProfile  # Import both schemas
-from ..prompts import TARGET_COMPANY_PROFILER_PROMPT  # Import prompt
+from .utils import MODEL, call_single_agent  # Import common utilities
+from .schema import CompanyProfile, StartupProfile  # Import both schemas
+from .prompts import TARGET_COMPANY_PROFILER_PROMPT  # Import prompt
 
 logger = logging.getLogger(__name__)  # Using uvicorn logger as specified by the user
 
@@ -22,7 +22,7 @@ class TargetCompanyProfilerAgent:
         )
 
     async def call(
-        self, target_profile: StartupProfile, user_id: str, session_id: str
+        self, target_profile_url: str, user_id: str, session_id: str
     ) -> CompanyProfile:
         """
         Augments a given StartupProfile with additional general company information.
@@ -38,17 +38,17 @@ class TargetCompanyProfilerAgent:
         """
         # Pass the entire StartupProfile as input data to the agent
         # The prompt is designed to instruct the LLM to parse this and then research
-        input_data = { "company_url": target_profile.websiteUrl }  # Convert Pydantic model to dict for input
+        input_data = { "company_url": target_profile_url }  # Convert Pydantic model to dict for input
 
         logger.info(
-            f"TargetCompanyProfilerAgent: Augmenting StartupProfile for {target_profile.registeredName}"
+            f"TargetCompanyProfilerAgent: Augmenting StartupProfile for {target_profile_url}"
         )
 
         # Call the single agent. The prompt instructs the agent to perform web searches
         # using the provided websiteUrl from the StartupProfile and populate the
         # remaining CompanyProfile fields.
         raw_response = await call_single_agent(
-            self.agent, user_id, session_id, TARGET_COMPANY_PROFILER_PROMPT, input_data
+            self.agent, user_id, session_id, "", input_data
         )
 
         logger.info(f"TargetCompanyProfilerAgent Raw Response: {raw_response}")

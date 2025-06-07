@@ -8,16 +8,15 @@ from .sub_agents import (
     CompetitorDetailsAgent,
     ComparativeAnalysisAgent,
     ExecutiveSummaryAgent,
-    TargetCompanyProfilerAgent,
-    profile_competitors_in_parallel,
 )
 
 from .schema import (
     FullCompetitiveAnalysisReport,
+    CompanyProfile,
 )
 from .utils import save_json_to_file
 
-logger = logging.getLogger("uvicorn")
+logger = logging.getLogger(__name__)
 
 BASE_OUTPUT_DIR = "/Users/apple/work/Antennae/Automation/outputs/example"
 
@@ -25,7 +24,6 @@ BASE_OUTPUT_DIR = "/Users/apple/work/Antennae/Automation/outputs/example"
 # The Orchestrator Agent that manages the workflow
 class OrchestratorAgent:
     def __init__(self):
-        self.target_profiler = TargetCompanyProfilerAgent()
         self.competitor_identifier = CompetitorIdentificationAgent()
         self.competitor_details_agent = CompetitorDetailsAgent()
         self.comparative_analyser = ComparativeAnalysisAgent()
@@ -33,7 +31,7 @@ class OrchestratorAgent:
         self.executive_summary_agent = ExecutiveSummaryAgent()
 
     async def run_analysis(
-        self, company_url: str, user_id: str, session_id: str
+        self, target_profile: CompanyProfile, user_id: str, session_id: str
     ) -> FullCompetitiveAnalysisReport:
         """
         Orchestrates the entire competitive analysis process by calling specialized agents sequentially.
@@ -44,14 +42,9 @@ class OrchestratorAgent:
         os.makedirs(output_dir, exist_ok=True)
 
         logger.info(
-            f"Orchestrator: Starting analysis for {company_url}. Outputs will be saved to '{output_dir}'"
+            f"Orchestrator: Starting analysis for {target_profile.name}. Outputs will be saved to '{output_dir}'"
         )
 
-        # 1. Profile Target Company
-        logger.info("Orchestrator: Calling TargetCompanyProfilerAgent...")
-        target_profile = await self.target_profiler.call(
-            company_url, user_id, f"{session_id}-target-profile"
-        )
         save_json_to_file(target_profile, "01_target_profile.json", output_dir)
         logger.info(f"Orchestrator: Target company profiled: {target_profile.name}")
         # target_profile_file_path = os.path.join(
@@ -84,12 +77,11 @@ class OrchestratorAgent:
         #     )
         # 3. Profile Each Competitor
         # For simplicity, profiling sequentially. In a real application, this could be parallelized.
-        competitor_profiles = await profile_competitors_in_parallel(
+        competitor_profiles = await self.competitor_details_agent.profile_competitors_in_parallel(
             competitor_infos,
-            self.competitor_details_agent,
             user_id,
-            session_id,
-            output_dir,
+            session_prefix=session_id,
+            output_dir=output_dir,
         )
 
         logger.info(
@@ -115,7 +107,7 @@ class OrchestratorAgent:
         # 4. Perform Comparative Analysis
         logger.info("Orchestrator: Calling ComparativeAnalysisAgent...")
         comparative_analysis = await self.comparative_analyser.call(
-            target_profile, competitor_profiles, user_id, f"{session_id}-compare"
+            competitor_profiles, user_id, f"{session_id}-compare"
         )
         save_json_to_file(
             comparative_analysis, "04_comparative_analysis.json", output_dir
