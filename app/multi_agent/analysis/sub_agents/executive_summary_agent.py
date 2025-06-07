@@ -1,7 +1,9 @@
-from google.adk import Agent
 import logging
 
-from ..schema import FullCompetitiveAnalysisReport
+from google.adk import Agent
+from google.genai import types
+
+from ..schema import ExecutiveSummary, FullCompetitiveAnalysisReport
 from ..prompts import EXECUTIVE_SUMMARY_PROMPT
 from ..utils import MODEL, call_single_agent
 
@@ -14,7 +16,12 @@ class ExecutiveSummaryAgent:
             model=MODEL,
             name="executive_summary_agent",
             instruction=EXECUTIVE_SUMMARY_PROMPT,
+            generate_content_config=types.GenerateContentConfig(
+                response_mime_type="application/json",
+            ),
             tools=[],  # No tools needed
+            output_schema=ExecutiveSummary,
+            output_key="summary",
         )
 
     async def call(

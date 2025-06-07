@@ -1,0 +1,307 @@
+{
+    "name": "Hoopr.ai",
+    "url": "https://hoopr.ai/",
+    "founding_date": "2021",
+    "headquarters": {
+        "address": "A-1203, Serenity Complex, Off Link Road, Oshiwara West",
+        "city": "Mumbai",
+        "state": "Maharashtra",
+        "country": "India",
+        "postal_code": "400102"
+    },
+    "core_products_services": [
+        {
+            "name": "Music Licensing Platform",
+            "description": "An online platform offering copyright-free and royalty-free music tracks and sound effects for content creators, businesses, and brands. It allows users to find and license music for videos, films, advertisements, podcasts, vlogs, and more.",
+            "category": "Music Technology"
+        },
+        {
+            "name": "Extensive Music Library",
+            "description": "A vast catalog of over 25,000 tracks and sound effects, including high-quality, premium Indian music across various genres and moods, tailored for the local market.",
+            "category": "Digital Content Library"
+        },
+        {
+            "name": "AI-powered Music Selection",
+            "description": "Utilizes AI and machine learning to enhance search capabilities and provide intelligent recommendations for finding the right soundtracks.",
+            "category": "Artificial Intelligence"
+        },
+        {
+            "name": "Musician Monetization Platform",
+            "description": "Provides opportunities for independent musicians to monetize their work by licensing their music to content creators and brands.",
+            "category": "Artist Services"
+        },
+        {
+            "name": "Subscription Plans",
+            "description": "Offers various subscription tiers for digital content creators, agencies, video editors, and custom plans for businesses, allowing unlimited downloads and worldwide clearance for platforms like YouTube and Instagram.",
+            "category": "Subscription Service"
+        }
+    ],
+    "key_metrics": [
+        {
+            "metric_name": "Total Funding",
+            "value": "$3.09M",
+            "source_name": "Tracxn",
+            "source_url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AbF9wXEsJ8QN4itRvgZ1Zrjud1Cj15K0cbMViUlcgKIPA4UKaEzS4sIDvAPamxp2H_CPUuGaptE9cOI9yU0hXILnguIYDmAHHY_gnyt7rQP-Ws9_-4GUz9QAv96dqJITglyxUKaMZz-Z478BxpbMq1eOO8_s2BQ_ClbounTHj6D2x6ovFu6LmhPxz169CgXhNa8=",
+            "date": "2025-05-29"
+        },
+        {
+            "metric_name": "Number of Funding Rounds",
+            "value": "5",
+            "source_name": "Tracxn",
+            "source_url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AbF9wXEsJ8QN4itRvgZ1Zrjud1Cj15K0cbMViUlcgKIPA4UKaEzS4sIDvAPamxp2H_CPUuGaptE9cOI9yU0hXILnguIYDmAHHY_gnyt7rQP-Ws9_-4GUz9QAv96dqJITglyxUKaMZz-Z478BxpbMq1eOO8_s2BQ_ClbounTHj6D2x6ovFu6LmhPxz169CgXhNa8=",
+            "date": "2025-05-29"
+        },
+        {
+            "metric_name": "Latest Funding Round Amount",
+            "value": "$23.1K",
+            "source_name": "Tracxn",
+            "source_url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AbF9wXEsJ8QN4itRvgZ1Zrjud1Cj15K0cbMViUlcgKIPA4UKaEzS4sIDvAPamxp2H_CPUuGaptE9cOI9yU0hXILnguIYDmAHHY_gnyt7rQP-Ws9_-4GUz9QAv96dqJITglyxUKaMZz-Z478BxpbMq1eOO8_s2BQ_ClbounTHj6D2x6ovFu6LmhPxz169CgXhNa8=",
+            "date": "2025-05-29"
+        },
+        {
+            "metric_name": "Latest Funding Round Date",
+            "value": "May 30, 2022",
+            "source_name": "Tracxn",
+            "source_url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AbF9wXEsJ8QN4itRvgZ1Zrjud1Cj15K0cbMViUlcgKIPA4UKaEzS4sIDvAPamxp2H_CPUuGaptE9cOI9yU0hXILnguIYDmAHHY_gnyt7rQP-Ws9_-4GUz9QAv96dqJITglyxUKaMZz-Z478BxpbMq1eOO8_s2BQ_ClbounTHj6D2x6ovFu6LmhPxz169CgXhNa8=",
+            "date": "2025-05-29"
+        },
+        {
+            "metric_name": "Seed Funding Amount",
+            "value": "$1.5 million",
+            "source_name": "StartupTalky",
+            "source_url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AbF9wXGScex9gD-r0UeRh66pwUJ5bNC-z8dgs6NGS9Z9BRkAxlm29czkBJErcaj8BDayLU5I_3G8nWVICp3odMaz9dHMNoYHi9YeRwC4WPCu0ZiFTR6sLxVwRUZpvBAcdqRwtDxUWTh2VideXQ==",
+            "date": "2023-11-23"
+        },
+        {
+            "metric_name": "Valuation",
+            "value": "\u20b9101Cr",
+            "source_name": "Tracxn",
+            "source_url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AbF9wXEsJ8QN4itRvgZ1Zrjud1Cj15K0cbMViUlcgKIPA4UKaEzS4sIDvAPamxp2H_CPUuGaptE9cOI9yU0hXILnguIYDmAHHY_gnyt7rQP-Ws9_-4GUz9QAv96dqJITglyxUKaMZz-Z478BxpbMq1eOO8_s2BQ_ClbounTHj6D2x6ovFu6LmhPxz169CgXhNa8=",
+            "date": "2023-12-29"
+        },
+        {
+            "metric_name": "Music Library Size",
+            "value": "Over 25,000 tracks and sound effects",
+            "source_name": "StartupTalky",
+            "source_url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AbF9wXGScex9gD-r0UeRh66pwUJ5bNC-z8dgs6NGS9Z9BRkAxlm29czkBJErcaj8BDayLU5I_3G8nWVICp3odMaz9dHMNoYHi9YeRwC4WPCu0ZiFTR6sLxVwRUZpvBAcdqRwtDxUWTh2VideXQ==",
+            "date": "2023-11-23"
+        },
+        {
+            "metric_name": "Number of Users",
+            "value": "Over 200,000",
+            "source_name": "Hoopr marks a major milestone in content creation, surpasses 2 lakh users",
+            "source_url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AbF9wXGF955bdYWlXvdNiVhuraxJEuHUCZ0GLodWdBUm5sgKeOQcXGmwEUySqNRhDRXVUjgVdJ2BnU0TIeLasWRgGHN0xkgqxfkgFWKPckofLA0cxJa_L5x3tBKXrHfhoQO8Q5tK3iNrINOOfLndcpKiT6FBn4cc3R3FHW8v7qyogCYlreJCdrdNB-_-Vq4i9f_h62zy8re8Ezyd3jSnQSxUfTWqLILrjjr9HHjEjskKPU3YZTCLGTg=",
+            "date": "2024-05-29"
+        },
+        {
+            "metric_name": "Employee Count",
+            "value": "31",
+            "source_name": "Tracxn",
+            "source_url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AbF9wXEsJ8QN4itRvgZ1Zrjud1Cj15K0cbMViUlcgKIPA4UKaEzS4sIDvAPamxp2H_CPUuGaptE9cOI9yU0hXILnguIYDmAHHY_gnyt7rQP-Ws9_-4GUz9QAv96dqJITglyxUKaMZz-Z478BxpbMq1eOO8_s2BQ_ClbounTHj6D2x6ovFu6LmhPxz169CgXhNa8=",
+            "date": "2024-12-31"
+        },
+        {
+            "metric_name": "Annual Revenue",
+            "value": "\u20b92.11Cr",
+            "source_name": "Tracxn",
+            "source_url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AbF9wXEsJ8QN4itRvgZ1Zrjud1Cj15K0cbMViUlcgKIPA4UKaEzS4sIDvAPamxp2H_CPUuGaptE9cOI9yU0hXILnguIYDmAHHY_gnyt7rQP-Ws9_-4GUz9QAv96dqJITglyxUKaMZz-Z478BxpbMq1eOO8_s2BQ_ClbounTHj6D2x6ovFu6LmhPxz169CgXhNa8=",
+            "date": "2024-03-31"
+        }
+    ],
+    "market_segments": [
+        {
+            "segment": "Content Creators",
+            "details": "Video creators, vloggers, podcasters, filmmakers, gamers, and influencers seeking copyright-safe music for their digital content across various platforms like YouTube and Instagram."
+        },
+        {
+            "segment": "Businesses and Brands",
+            "details": "Corporations, marketing agencies, and businesses that need licensed music for ad campaigns, corporate videos, and other commercial content."
+        },
+        {
+            "segment": "Musicians",
+            "details": "Independent artists looking for a platform to license their music and monetize their work by providing content for creators and businesses."
+        }
+    ],
+    "geographic_footprint": [
+        {
+            "region": "India",
+            "details": "Headquartered in Mumbai, India, with operations and users across 28 states and 8 union territories."
+        },
+        {
+            "region": "Global",
+            "details": "Plans for global expansion and caters to international users."
+        }
+    ],
+    "unique_value_propositions": [
+        {
+            "proposition": "India's First and Largest Music Licensing Platform",
+            "details": "Hoopr is recognized as a pioneer and leading platform for music licensing specifically catering to the Indian market."
+        },
+        {
+            "proposition": "Extensive Library of Indian Music",
+            "details": "Offers a diverse and large library of high-quality, premium Indian music tracks and sound effects, catering to the unique needs of local content creators."
+        },
+        {
+            "proposition": "Simplified Copyright Compliance",
+            "details": "Simplifies the process of finding and licensing music, enabling creators to use audio without worrying about copyright claims, strikes, or legal complications."
+        },
+        {
+            "proposition": "AI-Powered Music Discovery",
+            "details": "Leverages AI and machine learning for intelligent recommendations and efficient search, making it easier for users to find the perfect soundtrack."
+        },
+        {
+            "proposition": "Empowering Independent Musicians",
+            "details": "Provides a significant opportunity for independent Indian musicians to monetize their work and gain exposure by licensing their music through the platform."
+        }
+    ],
+    "recent_developments": [
+        {
+            "date": "2025-04-29",
+            "development": "Launched Hoopr Smash, India's first tech platform for music licensing.",
+            "source_name": "Tracxn",
+            "source_url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AbF9wXEsJ8QN4itRvgZ1Zrjud1Cj15K0cbMViUlcgKIPA4UKaEzS4sIDvAPamxp2H_CPUuGaptE9cOI9yU0hXILnguIYDmAHHY_gnyt7rQP-Ws9_-4GUz9QAv96dqJITglyxUKaMZz-Z478BxpbMq1eOO8_s2BQ_ClbounTHj6D2x6ovFu6LmhPxz169CgXhNa8=",
+            "details": null
+        },
+        {
+            "date": "2025-02-14",
+            "development": "Collaborated with budding influencers to revolutionize digital branded-content creation.",
+            "source_name": "Tracxn",
+            "source_url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AbF9wXEsJ8QN4itRvgZ1Zrjud1Cj15K0cbMViUlcgKIPA4UKaEzS4sIDvAPamxp2H_CPUuGaptE9cOI9yU0hXILnguIYDmAHHY_gnyt7rQP-Ws9_-4GUz9QAv96dqJITglyxUKaMZz-Z478BxpbMq1eOO8_s2BQ_ClbounTHj6D2x6ovFu6LmhPxz169CgXhNa8=",
+            "details": null
+        },
+        {
+            "date": "2024-10-24",
+            "development": "Strengthened B2B play with Hoopr Brand Solutions.",
+            "source_name": "Tracxn",
+            "source_url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AbF9wXEsJ8QN4itRvgZ1Zrjud1Cj15K0cbMViUlcgKIPA4UKaEzS4sIDvAPamxp2H_CPUuGaptE9cOI9yU0hXILnguIYDmAHHY_gnyt7rQP-Ws9_-4GUz9QAv96dqJITglyxUKaMZz-Z478BxpbMq1eOO8_s2BQ_ClbounTHj6D2x6ovFu6LmhPxz169CgXhNa8=",
+            "details": null
+        },
+        {
+            "date": "2024-06-24",
+            "development": "Strengthened executive team with top industry talent.",
+            "source_name": "Tracxn",
+            "source_url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AbF9wXEsJ8QN4itRvgZ1Zrjud1Cj15K0cbMViUlcgKIPA4UKaEzS4sIDvAPamxp2H_CPUuGaptE9cOI9yU0hXILnguIYDmAHHY_gnyt7rQP-Ws9_-4GUz9QAv96dqJITglyxUKaMZz-Z478BxpbMq1eOO8_s2BQ_ClbounTHj6D2x6ovFu6LmhPxz169CgXhNa8=",
+            "details": null
+        },
+        {
+            "date": "2024-05-29",
+            "development": "Surpassed 2 lakh (200,000) users.",
+            "source_name": "Hoopr marks a major milestone in content creation, surpasses 2 lakh users",
+            "source_url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AbF9wXGF955bdYWlXvdNiVhuraxJEuHUCZ0GLodWdBUm5sgKeOQcXGmwEUySqNRhDRXVUjgVdJ2BnU0TIeLasWRgGHN0xkgqxfkgFWKPckofLA0cxJa_L5x3tBKXrHfhoQO8Q5tK3iNrINOOfLndcpKiT6FBn4cc3R3FHW8v7qyogCYlreJCdrdNB-_-Vq4i9f_h62zy8re8Ezyd3jSnQSxUfTWqLILrjjr9HHjEjskKPU3YZTCLGTg=",
+            "details": "This milestone includes users from both India and abroad, consisting of content creators, influencers, brands, and businesses."
+        }
+    ],
+    "citations": [
+        {
+            "source_name": "StartupTalky",
+            "date": "2023-11-23",
+            "source_url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AbF9wXGScex9gD-r0UeRh66pwUJ5bNC-z8dgs6NGS9Z9BRkAxlm29czkBJErcaj8BDayLU5I_3G8nWVICp3odMaz9dHMNoYHi9YeRwC4WPCu0ZiFTR6sLxVwRUZpvBAcdqRwtDxUWTh2VideXQ=="
+        },
+        {
+            "source_name": "Tracxn",
+            "date": "2025-05-29",
+            "source_url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AbF9wXEsJ8QN4itRvgZ1Zrjud1Cj15K0cbMViUlcgKIPA4UKaEzS4sIDvAPamxp2H_CPUuGaptE9cOI9yU0hXILnguIYDmAHHY_gnyt7rQP-Ws9_-4GUz9QAv96dqJITglyxUKaMZz-Z478BxpbMq1eOO8_s2BQ_ClbounTHj6D2x6ovFu6LmhPxz169CgXhNa8="
+        },
+        {
+            "source_name": "Hoopr.ai",
+            "date": null,
+            "source_url": "https://hoopr.ai/"
+        },
+        {
+            "source_name": "PitchBook",
+            "date": null,
+            "source_url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AbF9wXHpVjy3V1Jcx5jlJQNUkwKkYsnJEw20cxPk_rJy2gS4vE1lLEeSDcAMwY25n8zAS5g7A90dBvoIuY-U1XocWVY4JFWV7eOLtoBwbPCW3n6yPxxkKd_9ihttLA-PNWB06vzUvYCPAq8oIvdcHg=="
+        },
+        {
+            "source_name": "Askpot",
+            "date": null,
+            "source_url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AbF9wXExpyUMmxNJR1SpQTjw1Pvneokv74pU0e49hZ2aWbgVEf9XR6v1xKpnPpK9erLR34u5SxzMsvP974IZylsRKX1YLBxjfXfuRLf5gPiY54aDMEf7kmb4daxEMWMgRlOHMAk="
+        },
+        {
+            "source_name": "Mint",
+            "date": "2021-12-14",
+            "source_url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AbF9wXFtaZee36rwP-V06xsM_bu60Fu0w8AvooA3SgNkDxbTUAV-BiyEHrC79fGctFokH19QBSGp2HhZXvKYAGxeRnA0Uy3zxFa6AXu13a6UpV1gsxcWVBwEywRyAJ7BGPjVzinZpCvmswbpTtxJvfDoAeobRyGayLFIz_CSl07X_rJCFxu13d09unQdW4RS_lSFw55yXQ0WjsgnDCrSmfEwlbtQUJErlf36iIJAANFcuSZ5l49dobE3IUJ9kCPI9Oo="
+        },
+        {
+            "source_name": "CB Insights",
+            "date": null,
+            "source_url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AbF9wXF38OoERVb2LlJHHWqG2mr8fqYLGpr3IQSUTKgn_eZBx87MZWwGKRUlUKgJzZRNkP3iZwy0QnKLYDBJYtTGpsp_nG-Fx4HX3QhkcDx7PGVI8gyV5FYPqz32SyfpuJC89BLFqmyTQXZTLWLzOunYNg=="
+        },
+        {
+            "source_name": "Appengine AI",
+            "date": null,
+            "source_url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AbF9wXFn-l72pqkEUDtTmMVncslg_HoKS7xaBD9dxYF1H2q91AdRQHCpHiEO5KH4Z_bfHFa2SgJNNwDki011aFqkswGNuNESVuuEmIdb-HBfljvIA5IjEgVXxEG5c2TCl3m9-HMl"
+        },
+        {
+            "source_name": "EVENTFAQS Media",
+            "date": "2024-10-07",
+            "source_url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AbF9wXHdr4gW15zQukGiBXfbWhAdEmx_hwQ91kzQ0gY6xPQnv902lMFUf3UtwNSM_QMmXVG-Mkqzscexxkohb33imQsZVZTIhobQVSltKJrhbnHIddRMvOmTLXvtpz_DKb0U4hiLsQmOR_Cktp3IqdbjIEFBQAXVxzH9TL2P7zjolfVs1ufR1QeNDWjLI-_tvFoiaCC22wl5MxosneeJSjg8T1wglhK1r9vggx2mi"
+        },
+        {
+            "source_name": "CallUpContact",
+            "date": null,
+            "source_url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AbF9wXHXbNYaTdEkGojwETanEBzRLtBAmLR20S_SKxsIXI2CbzkSNeHkqmrPWONSvcysah0exzzygJoO7DJtnpNx0r_mY_n9HIxjYVsOeMp9mWR4gEeXRmyH8LZqGqk6c_4qPcJeYx9co1ngshVTk0hiUjy02IO4QaBWB1o="
+        },
+        {
+            "source_name": "Dealroom.co",
+            "date": "2021-12-01",
+            "source_url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AbF9wXFE7hK4wL94SUuMLPsJKD_OLe48TrF473omixmzNvZSC2otAZF9DwRePafqzd9SzWJSx1nO39q-kGr2WzKyfKtmRwzTlqjB9khuO4Vf7eY98rW2VG0MSoVo3ijwX5Rad2K2s9M="
+        },
+        {
+            "source_name": "India News & Updates on EVENTFAQS",
+            "date": "2024-07-18",
+            "source_url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AbF9wXGIH_TZIBRI9bC5tcVQqWHHz7itWcHy-e9X3HAnZPn2a0K3CBinl6csTw36iy89ls99y8441mDRc_Uj3UYg59jxa9VvfqCsKn9rFUrEnjHC_Ai8FdN0vqgLlG6E0SFRcFCE3qFKduasNetPcBuZTmPFJoZNA_sljcH-KZ602lIKuiByz0uqI_3k9K2qmAZFIw9aHD1vXlof6X_02QY5qQ2VFUf4OG1a"
+        },
+        {
+            "source_name": "Hoopr - India ka Sound",
+            "date": null,
+            "source_url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AbF9wXHAYJ5lZ3DIQafvuq6aR683y4TefHSLhjVgV3yYoJ6xuD7PS47RPQYeJ4idfsAuDwJLMyw-JtDYIn2-flhSnE0csbmawMahOJGpZzUa1D9XAV4GJoY="
+        },
+        {
+            "source_name": "YourStory",
+            "date": null,
+            "source_url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AbF9wXFusdDluoNuhJ3qYYtk8jFYQE-Rk0oBeKU_S7AV94SgPzB4EvT7-nUxiW7lzzLkQaklzPf_7zPN02T8sp2BeqvvEyywCzXySTlokHNJ-1v4m2aKXh15o219RBgzmfPiJ8="
+        },
+        {
+            "source_name": "Hoopr marks a major milestone in content creation, surpasses 2 lakh users",
+            "date": "2024-05-29",
+            "source_url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AbF9wXGF955bdYWlXvdNiVhuraxJEuHUCZ0GLodWdBUm5sgKeOQcXGmwEUySqNRhDRXVUjgVdJ2BnU0TIeLasWRgGHN0xkgqxfkgFWKPckofLA0cxJa_L5x3tBKXrHfhoQO8Q5tK3iNrINOOfLndcpKiT6FBn4cc3R3FHW8v7qyogCYlreJCdrdNB-_-Vq4i9f_h62zy8re8Ezyd3jSnQSxUfTWqLILrjjr9HHjEjskKPU3YZTCLGTg="
+        },
+        {
+            "source_name": "Hoopr.ai",
+            "date": null,
+            "source_url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AbF9wXF-Nq8AxSSvwiazj4aJV7aZFCNfDXED-0VGvJ7DhJ8etgPBAEXbu0QrKhz_QEn4HJF3v2_47Hyp9Bis27sFMnYfVmHh7zgbVqBlq4Qi"
+        },
+        {
+            "source_name": "Inc42",
+            "date": "2021-12-14",
+            "source_url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AbF9wXEQ-xj07Ogxfo8wxRe8TI1ESJgdbwv0xppNQArvCKIRG8dveeVselUisO7kWozLm3Jg9hsv4FeAcJzM_OpumqCJCEIUwxpCE9r9GBUfXbm65yrroYBs-vd3VRYv7OEOocGGmZmlUkZH9dGBdPoWVfwyUVAjc4_4egGt_3JrpyQ8vRAezIr2EA="
+        },
+        {
+            "source_name": "Hoopr Blogs",
+            "date": "2023-06-17",
+            "source_url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AbF9wXE5yJzU6Ot3Wa-cHUjrGdjATBSl9AEixmJ5qFeUEc9gQ_EtFgG2Mj8ICCHQt7mveec7ngh-VaeMP_iF3PL1jHYcJKF1dF_MakwDUJKxRKXwPntBaRwZRhSUr6PBJZSdqXA_0FASxOZK5PVfcZymKeLSYHuPkvCd"
+        },
+        {
+            "source_name": "CXOToday.com",
+            "date": "2024-09-04",
+            "source_url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AbF9wXFNsaRiUs5Rtr_vKHWnbi5wZbdt8jVK9h62C2FashsCYZKtRKyAxFkDYsRkZXwW1JvnTTHega8waewXqfHnRhxAlW3rRDKpegFxKtGTA8JqUGi34FRIk7r8BpOwV2HLO7o2UuarA8mQDiOLcBG4YmgpmsLvvtc6idDRy1Fwm8iEPDTPglsfSarZFYWDQTFbYv-yjJFT-iyeSsiygi3Y3UbBvw=="
+        },
+        {
+            "source_name": "exchange4media",
+            "date": "2023-05-18",
+            "source_url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AbF9wXF7uxGOxbcCuiOkNDESPKv8g09MZGgB7rJzAyn-qEkrSrvPCFmZec12fYxBkjTVRt78X43soP4P5LTu_TPgSl1USFjZGGPc9oQs0i4cD09FywKCm3qVF5pRaGblrKDnCjnhmTITUtk6F0Wx2m4b9ITVTGMaPseseXAvrqw-Zcxpl5oV9duziz7AEiBArQAxzEJ_B46m3auxEZY="
+        },
+        {
+            "source_name": "Hoopr Buzz",
+            "date": null,
+            "source_url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AbF9wXFT8Pusq3IDh7ygYHdXHfhvfI-n4kS8akxcLBPbEwZmKsT1NbdffWweBq_wG5nuu_14o3wdB6nI5VWcZVQQfwi0MGnAjmG4l0vwEN0S_QrTcJldAiT53IzugfK95Wwyl4MB-2fanqXR02FMlQOqQ0qiYQSFSp31TQ=="
+        },
+        {
+            "source_name": "Hoopr",
+            "date": null,
+            "source_url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AbF9wXGnXpegTAgosg1oNgtoGoOnh1_00uNDTMc5QxeYt5rSEcSgI-9L6CfAZQbYh3Af22waTJfb2xq5-cn_C_yYz43F7BtnKwXRbtBzkr9RTOyaaS5QlUB1AzwB-_Hec01Ys-zuacKFD1gLJru7cgdbZw=="
+        }
+    ],
+    "other_relevant_info": null
+}

@@ -1,0 +1,298 @@
+{
+    "name": "Uppbeat",
+    "url": "https://uppbeat.io",
+    "founding_date": "2020",
+    "headquarters": {
+        "address": "Studio 21, 30-38 Dock Street",
+        "city": "Leeds",
+        "state": null,
+        "country": "United Kingdom",
+        "postal_code": "LS10 1JF"
+    },
+    "core_products_services": [
+        {
+            "name": "Royalty-free Music Library",
+            "description": "A curated collection of music tracks from indie artists, producers, and composers, available for use in content creation without copyright claims.",
+            "category": "Digital Music Licensing"
+        },
+        {
+            "name": "Sound Effects Library",
+            "description": "A collection of copyright-free sound effects for various creative projects.",
+            "category": "Digital Audio Licensing"
+        },
+        {
+            "name": "Motion Graphics Library",
+            "description": "Thousands of dynamic animations, templates, transitions, overlays, LUTs, and visual elements compatible with various editing software.",
+            "category": "Digital Visual Assets Licensing"
+        },
+        {
+            "name": "AI Playlist Generator",
+            "description": "An AI-powered tool (using ChatGPT) that suggests perfect artist-made tracks based on text descriptions of content needs, scene, or vibe.",
+            "category": "AI Tools"
+        },
+        {
+            "name": "Freemium Model",
+            "description": "Offers both free and premium subscription options, with free users requiring an 'Uppbeat credit' for YouTube content and premium users gaining unlimited access, channel whitelisting, and exclusive content.",
+            "category": "Subscription Service"
+        }
+    ],
+    "key_metrics": [
+        {
+            "metric_name": "Total Funding Raised",
+            "value": "$6.15M - $6.16M",
+            "source_name": "Tracxn, Hypebot, EU-Startups, UKTN, Tubefilter",
+            "source_url": "https://tracxn.com/d/companies/uppbeat/__wYj2w1_Wd-p0Gj0n06fW6A, https://hypebot.com/news/2022/03/01/uppbeat-raises-6-15m-to-sell-youtube-tiktok-twitch-creators-royalty-free-music/, https://eu-startups.com/company/uppbeat/, https://uktech.news/2021/01/18/uppbeat-leeds-based-startup-music-vine-launches-free-music-platform-for-content-creators-with-no-youtube-copyright-or-demonetisation-issues/, https://www.tubefilter.com/2022/03/01/uppbeat-funding-copyright-free-music-youtube-tiktok-twitch/",
+            "date": "March 2022"
+        },
+        {
+            "metric_name": "Users",
+            "value": "1 million",
+            "source_name": "Tracxn, UKTN, Press Releases & Media",
+            "source_url": "https://tracxn.com/d/companies/uppbeat/__wYj2w1_Wd-p0Gj0n06fW6A, https://uktech.news/2022/11/16/music-licensing-startup-uppbeat-reaches-1m-users-milestone/, https://uppbeat.io/press",
+            "date": "November 2022"
+        },
+        {
+            "metric_name": "Users (Current Claim)",
+            "value": "1.5 million creators",
+            "source_name": "Uppbeat Blog",
+            "source_url": "https://uppbeat.io/blog/whats-in-the-uppbeat-blog",
+            "date": null
+        },
+        {
+            "metric_name": "Music Tracks (Launch)",
+            "value": "over 1,000",
+            "source_name": "UKTN, CineD",
+            "source_url": "https://uktech.news/2021/01/18/uppbeat-leeds-based-startup-music-vine-launches-free-music-platform-for-content-creators-with-no-youtube-copyright-or-demonetisation-issues/, https://cined.com/2021/01/uppbeat-launched-free-music-for-youtubers-and-content-creators/",
+            "date": "January 2021"
+        },
+        {
+            "metric_name": "Music Tracks (March 2022)",
+            "value": "3,000+",
+            "source_name": "Tracxn",
+            "source_url": "https://tracxn.com/d/companies/uppbeat/__wYj2w1_Wd-p0Gj0n06fW6A",
+            "date": "March 2022"
+        },
+        {
+            "metric_name": "Employee Count",
+            "value": "8",
+            "source_name": "Tracxn",
+            "source_url": "https://tracxn.com/d/companies/uppbeat/__wYj2w1_Wd-p0Gj0n06fW6A",
+            "date": "September 30, 2021"
+        },
+        {
+            "metric_name": "Annual Revenue Run Rate",
+            "value": "$718K",
+            "source_name": "Tracxn",
+            "source_url": "https://tracxn.com/d/companies/uppbeat/__wYj2w1_Wd-p0Gj0n06fW6A",
+            "date": "March 2022"
+        },
+        {
+            "metric_name": "Monthly Website Visits",
+            "value": "1.97M",
+            "source_name": "Semrush",
+            "source_url": "https://www.semrush.com/website/uppbeat.io/overview/",
+            "date": "March 2025"
+        }
+    ],
+    "market_segments": [
+        {
+            "segment": "Content Creators",
+            "details": "Including YouTubers, TikTok creators, podcasters, live streamers, vloggers, video and film makers, broadcasters, and social media influencers."
+        },
+        {
+            "segment": "Small Businesses",
+            "details": "Organizations with up to 10 employees."
+        }
+    ],
+    "geographic_footprint": [
+        {
+            "region": "United Kingdom",
+            "details": "Headquartered in Leeds, England."
+        },
+        {
+            "region": "Global",
+            "details": "Serves creators across the world and has tested markets in 30 countries."
+        }
+    ],
+    "unique_value_propositions": [
+        {
+            "proposition": "Copyright-Free and Royalty-Free Music",
+            "details": "Provides a vast library of music and sound effects that can be used without fear of copyright claims or demonetization on platforms like YouTube."
+        },
+        {
+            "proposition": "Freemium Business Model",
+            "details": "Offers a free tier with attribution and a premium tier for unlimited downloads, channel whitelisting, and exclusive content, making high-quality music accessible to all creators."
+        },
+        {
+            "proposition": "Ethical Artist Compensation",
+            "details": "Ensures musicians, sound effect creators, and motion graphics artists are fairly compensated through a revenue-sharing model, promoting a sustainable ecosystem for both creators and artists."
+        },
+        {
+            "proposition": "AI-Powered Music Discovery",
+            "details": "Features an AI Playlist Generator that leverages ChatGPT to help creators quickly find suitable music based on text descriptions and desired mood."
+        },
+        {
+            "proposition": "One-Stop-Shop for Creative Assets",
+            "details": "Expands beyond music and sound effects to include motion graphics and LUTs, aiming to be a comprehensive resource for content creators."
+        },
+        {
+            "proposition": "Curated High-Quality Catalog",
+            "details": "Maintains a highly curated catalog, accepting only a small percentage of artist applications, ensuring premium quality and relevant tracks."
+        }
+    ],
+    "recent_developments": [
+        {
+            "date": "2025-02-25",
+            "development": "Launched new motion graphics library.",
+            "source_name": "Press Releases & Media, UKTN",
+            "source_url": "https://uppbeat.io/press, https://uktech.news/2025/02/25/uppbeat-launches-new-motion-graphics-library-to-become-one-stop-shop-for-creators/",
+            "details": null
+        },
+        {
+            "date": "2024-03-07",
+            "development": "Launched Gaming and Travel Hubs (new music sections).",
+            "source_name": "YouTube (Uppbeat channel)",
+            "source_url": "https://www.youtube.com/watch?v=kYvjY0gYx3s",
+            "details": null
+        },
+        {
+            "date": "2023-05-30",
+            "development": "Launched AI Playlist Generator powered by ChatGPT.",
+            "source_name": "Press Releases & Media, CineD",
+            "source_url": "https://uppbeat.io/press, https://cined.com/2023/05/uppbeat-ai-playlist-generator-launched-find-perfect-tracks-through-text-descriptions/",
+            "details": null
+        },
+        {
+            "date": "2022-11-16",
+            "development": "Reached 1 million users.",
+            "source_name": "Press Releases & Media, UKTN",
+            "source_url": "https://uppbeat.io/press, https://uktech.news/2022/11/16/music-licensing-startup-uppbeat-reaches-1m-users-milestone/",
+            "details": null
+        },
+        {
+            "date": "2022-03-01",
+            "development": "Raised \u00a34.6M GBP ($6.15M USD) in Series A funding.",
+            "source_name": "Press Releases & Media, UKTN, Hypebot",
+            "source_url": "https://uppbeat.io/press, https://uktech.news/2022/03/01/music-startup-uppbeat-raises-4-6m-in-series-a-funding/, https://hypebot.com/news/2022/03/01/uppbeat-raises-6-15m-to-sell-youtube-tiktok-twitch-creators-royalty-free-music/",
+            "details": "This completed Uppbeat's first funding round."
+        }
+    ],
+    "citations": [
+        {
+            "source_name": "Uppbeat - Products, Competitors, Financials, Employees, Headquarters Locations",
+            "date": null,
+            "source_url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AbF9wXH5wfiyePEHiFSe9fGcDQiBNxlzg2j3NkRcluuzkQf1ktd3ZrXXxjp6EoGwH1yfvw7oEKLnOYvoF-7I41yOPr501S42s_tJB7gyNW4076sJgYQa3dKhb3YDgt3yqRYTSapnl0mRwQ=="
+        },
+        {
+            "source_name": "Free Music For YouTube Videos & Creators \u2022 Uppbeat",
+            "date": null,
+            "source_url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AbF9wXGyYKGV571LRD-480WHUmDHRJxcfa_unv1LZGg4NpUnuOBFGskcAMM4vIFytg4wReQjrTKQaIS7Upu-QBIqt0dHFVY-SHXvnyIF0hb2Q48="
+        },
+        {
+            "source_name": "How finding the right tools can take the stress out of content creation | Creative Boom",
+            "date": "2025-04-07",
+            "source_url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AbF9wXGLhDdU5wYMQ5GwJk2VGLIVRGDlnJs4UU-bY606zUsQ6TB-yKKBX_jehjZdlURDhiOPeO4b-c9bU-TtIXRTdanhUqh5k9dvnkbTNpAfMpzIaCYnaRGHXXsieeNjKSaDHioLysMhvNkKTbuZa5bXEqPXtpijV_P76Ml3XvqbdsRKi4Uooa9tBPW6_tqt8GxLteOYSd8Oe0PrFzorCzfw9q9SRwjpyLA=="
+        },
+        {
+            "source_name": "Uppbeat: Leeds-based startup Music Vine launches free music platform for content creators with no YouTube copyright or demonetisation issues - UKTN",
+            "date": "2021-01-18",
+            "source_url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AbF9wXHWQAj4J1xftVxOC_P7yh_G6UKOkiQc1QGHj-75kldoCFCJcW3CQQf3_3F7y9qVuXNQ9MjIrIl3i53-fnDmoV55qeloyGc0w0dE62gUhb3wxj-adPt7ISLRvNF1a_uzl_clvgT4bxikUx8HGjEYEPnKMBEsKkzcpfYXgWejfIzoigxe651uMBy5Cb1BvfwHrW_KE8m7igqW5v3TrF396_jtDc6fnQ=="
+        },
+        {
+            "source_name": "Uppbeat - 2025 Company Profile, Funding, Competitors & Financials - Tracxn",
+            "date": "2025-03-28",
+            "source_url": "https://tracxn.com/d/companies/uppbeat/__wYj2w1_Wd-p0Gj0n06fW6A"
+        },
+        {
+            "source_name": "Uppbeat - Access copyright-free music and songs - AppSumo",
+            "date": null,
+            "source_url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AbF9wXGwRu-V1zKnkG985BiQyjwdEaKwHQZrvPXWJXoFuKRzQuS8l-LlNsCIIXS-CSKmX2M2kBOsvuFeJ_iZnI9nB9oXsprdoyDgrMeYOOp_NeIWYTj_2IrBT4Z-LQCM_bKlp-8="
+        },
+        {
+            "source_name": "There's an Uppbeat solution for copyright-free music on YouTube, TikTok, and Twitch",
+            "date": "2022-03-01",
+            "source_url": "https://www.tubefilter.com/2022/03/01/uppbeat-funding-copyright-free-music-youtube-tiktok-twitch/"
+        },
+        {
+            "source_name": "Uppbeat boosted by \u00a34.6M investment to establish the 'ultimate music platform' for content creators",
+            "date": "2022-03-01",
+            "source_url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AbF9wXE4K_SGDeHJebc0-Jup0OYsCqH_g2PReavUfZy5Lp4O9y75Grhm-c23LXAhrWBMuQtTO10hj-Jlrjf5n1yYCJIq6K6rBPS6lgfeNTuuSSdYpujR-0v-5GU7e3jIK0-T3lahKE5KS34="
+        },
+        {
+            "source_name": "Uppbeat raises $6.15M to sell YouTube, TikTok, Twitch creators royalty free music - Hypebot",
+            "date": "2022-03-01",
+            "source_url": "https://hypebot.com/news/2022/03/01/uppbeat-raises-6-15m-to-sell-youtube-tiktok-twitch-creators-royalty-free-music/"
+        },
+        {
+            "source_name": "Uppbeat - Company Profile",
+            "date": null,
+            "source_url": "https://tracxn.com/d/companies/uppbeat/__wYj2w1_Wd-p0Gj0n06fW6A"
+        },
+        {
+            "source_name": "Pricing \u2022 Elevate your creativity with the right plan - Uppbeat",
+            "date": null,
+            "source_url": "https://uppbeat.io/pricing"
+        },
+        {
+            "source_name": "Uppbeat | EU-Startups",
+            "date": null,
+            "source_url": "https://eu-startups.com/company/uppbeat/"
+        },
+        {
+            "source_name": "Uppbeat Features, Pricing, and Alternatives - AI Tools",
+            "date": null,
+            "source_url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AbF9wXHnW2YZ8DsO7CzodmKkW2xK9VG-NAcfg7wcFfTvU2keQJ-hmlfx6Osa1TP1UTdzbiRFYGhEsDAJb9w_wvRgT79O81jRXs8xZp0_VMqs9jBUBAIIRxgoRmxBZZTEKA=="
+        },
+        {
+            "source_name": "Case Study: Startup Gains 670k+ Users Through PPC - Aimers Agency",
+            "date": null,
+            "source_url": "https://aimers.agency/case-studies/uppbeat/"
+        },
+        {
+            "source_name": "Uppbeat launches new motion graphics library to become one-stop shop for creators",
+            "date": null,
+            "source_url": "https://uktech.news/2025/02/25/uppbeat-launches-new-motion-graphics-library-to-become-one-stop-shop-for-creators/"
+        },
+        {
+            "source_name": "Press Releases & Media - Uppbeat",
+            "date": null,
+            "source_url": "https://uppbeat.io/press"
+        },
+        {
+            "source_name": "Music startup Uppbeat raises \u00a34.6M in series A funding",
+            "date": null,
+            "source_url": "https://uktech.news/2022/03/01/music-startup-uppbeat-raises-4-6m-in-series-a-funding/"
+        },
+        {
+            "source_name": "Uppbeat AI Playlist Generator Launched \u2013 Find Perfect Tracks through Text Descriptions | CineD",
+            "date": "2023-05-30",
+            "source_url": "https://cined.com/2023/05/uppbeat-ai-playlist-generator-launched-find-perfect-tracks-through-text-descriptions/"
+        },
+        {
+            "source_name": "What's In The Uppbeat Blog?",
+            "date": null,
+            "source_url": "https://uppbeat.io/blog/whats-in-the-uppbeat-blog"
+        },
+        {
+            "source_name": "Compare Thematic vs. Uppbeat in 2025",
+            "date": null,
+            "source_url": "https://sourceforge.net/software/compare/thematic-vs-uppbeat/"
+        },
+        {
+            "source_name": "Uppbeat Launched - Free Music for YouTubers and Content Creators | CineD",
+            "date": "2021-01-18",
+            "source_url": "https://cined.com/2021/01/uppbeat-launched-free-music-for-youtubers-and-content-creators/"
+        },
+        {
+            "source_name": "What's new at Uppbeat? Everything you need to go all in - YouTube",
+            "date": "2024-03-07",
+            "source_url": "https://www.youtube.com/watch?v=kYvjY0gYx3s"
+        },
+        {
+            "source_name": "uppbeat.io Website Traffic, Ranking, Analytics [March 2025] | Semrush",
+            "date": "2025-04-14",
+            "source_url": "https://www.semrush.com/website/uppbeat.io/overview/"
+        }
+    ],
+    "other_relevant_info": null
+}

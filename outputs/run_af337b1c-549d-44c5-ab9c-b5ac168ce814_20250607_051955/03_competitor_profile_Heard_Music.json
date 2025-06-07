@@ -1,0 +1,100 @@
+{
+    "name": "Heard Music",
+    "url": "https://heardmusic.in",
+    "founding_date": "2022",
+    "headquarters": null,
+    "core_products_services": [
+        {
+            "name": "Music Supervision",
+            "description": "Curating high-quality music for visual stories in ads, web series, and films. This includes tracking down copyright owners, negotiating licenses, and commissioning original music.",
+            "category": "Music Services"
+        },
+        {
+            "name": "Artist Empowerment and Consulting",
+            "description": "Empowering Indian indie artists with information, resources, and opportunities. Offers free consultations on licensing deals, contracts, and negotiations.",
+            "category": "Artist Services"
+        },
+        {
+            "name": "Collaboration Facilitation",
+            "description": "Curating thriving collaborations between musicians and content creators of all shapes and sizes.",
+            "category": "Music Services"
+        }
+    ],
+    "key_metrics": [],
+    "market_segments": [
+        {
+            "segment": "Content Creators",
+            "details": "Those creating visual stories for ads, web series, and films."
+        },
+        {
+            "segment": "Independent Musicians/Artists",
+            "details": "Indian indie artists seeking resources, opportunities, and consultation."
+        },
+        {
+            "segment": "Record Labels, Publishers, and Copyright Holders",
+            "details": "Liaising with these entities for music licensing and negotiation."
+        }
+    ],
+    "geographic_footprint": [
+        {
+            "region": "India",
+            "details": "Primary operational focus and target market for indie artists."
+        },
+        {
+            "region": "Global",
+            "details": "Allies span across traditional folk to fresh contemporary artists across both India and the world."
+        }
+    ],
+    "unique_value_propositions": [
+        {
+            "proposition": "Bridging Film and Non-Film Music",
+            "details": "Focus on bridging the gap between film and non-film categories in the Indian music industry to push content quality."
+        },
+        {
+            "proposition": "Comprehensive Music Supervision",
+            "details": "Offers end-to-end music supervision services, from creative search to handling legal paperwork and managing music budgets."
+        },
+        {
+            "proposition": "Artist-Centric Approach",
+            "details": "Founded by musicians with a mission to empower Indian indie artists and ensure creators have control and are fairly rewarded."
+        },
+        {
+            "proposition": "Curated Collaborations",
+            "details": "Vision to curate thriving collaborations between musicians and content creators, making visual stories sound incredible."
+        }
+    ],
+    "recent_developments": [],
+    "citations": [
+        {
+            "source_name": "Heard Music Official Website (About Us)",
+            "date": null,
+            "source_url": "https://heardmusic.in/about"
+        },
+        {
+            "source_name": "Heard Music Official Website (Services)",
+            "date": null,
+            "source_url": "https://heardmusic.in/services"
+        },
+        {
+            "source_name": "Music Licensing Platform for Films And Advertising - Heard Music",
+            "date": null,
+            "source_url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AbF9wXFmUDrteS6l7ZpsoFa_uUfcYohzTxXIFfjgUZkYccdq28BHT15yrELLyRcciCtX5cBiHuyxpdt9ry7ndFlLgKvcmkdIkZMfOIPu5gsHLKC80ThLCWCEiA=="
+        },
+        {
+            "source_name": "Heard Music: Music Supervision Services in India",
+            "date": null,
+            "source_url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AbF9wXE3W-h8eBhacqDRogNh81cYkSGwwMikOijKgOffzgDyFuNNpP8hAHyfcV1XUk_26t08GbKQFDNoeZwx3geu5yAGCwyg1ktY1gpmUDdYmUANlbU=="
+        },
+        {
+            "source_name": "'Every creator must feel seen, heard and fairly rewarded' | Hindi Movie News - Times of India",
+            "date": "2025-06-03",
+            "source_url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AbF9wXEmQLlNfDHxp2aaHLuVsn87n2DwCPqSjp8B1EpC84FXPS0SpgofTl3TTxfU_i4iX_ZpjhVfLrbUGeDWv5I50aZoT5WukXGK9j6sm9E0v56DPOnGdIeMcbShXWyHrOa2S0iRy1XWOdyzVNt-wgV6-p-kDWfohQS0GQzjmTLL22U7IQ0WJcPkkvQuJML3SR09ivQcYeLsorhn10P4ircYtH8Cynvr0ZfAD6bJjIRqt9cEYDhTNQcBdAr0rJNRp49ieWUeMenISWt0J52Jo5-wZ2U="
+        },
+        {
+            "source_name": "5 Indie Musician Development Organisations in India - Heard Music",
+            "date": "2023-12-13",
+            "source_url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AbF9wXEdWtUa7AIK4M83vDl60F3788N1CagFZUVTOryMyqX2GC8qx8cAjyZgDwj884YQ2-sSiNVASwgJHhw_aWUuSvIEcIDeGG6jLfs-6mvwbKx4n2phbdK0ttn7lWDL7zS7btPgFaw5yK7GqsUr2AAG4YH9U_XMh_6CYsHehj_rZ4KppvbOEO1x"
+        }
+    ],
+    "other_relevant_info": null
+}

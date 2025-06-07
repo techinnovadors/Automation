@@ -1,4 +1,4 @@
-from .schema import CompanyProfile, CompetitorProfile, ComparativeAnalysisResult
+from .schema import CompanyProfile, CompetitorProfile, ComparativeAnalysisResult, ExecutiveSummary
 
 # General JSON output constraint
 JSON_OUTPUT_FORMAT = """
@@ -157,5 +157,6 @@ Provide a compelling executive summary (1-2 paragraphs) that covers:
 This summary should be informative enough for a busy executive to grasp the essence of the entire report without needing to read it in full.
 
 {JSON_OUTPUT_FORMAT}
-The JSON should be a single string (e.g., "This is the executive summary content.").
+The JSON should strictly follow the `ExecutiveSummary` schema.
+{ExecutiveSummary.model_json_schema()}
 """

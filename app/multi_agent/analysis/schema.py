@@ -188,6 +188,8 @@ class StartupProfile(BaseModel):
         validate_by_name = True
         populate_by_name = True
 
+class ExecutiveSummary(BaseModel):
+    summary: str
 
 # The comprehensive final report schema
 class FullCompetitiveAnalysisReport(BaseModel):

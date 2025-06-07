@@ -4,7 +4,7 @@ import logging
 from fastapi import APIRouter, Form, HTTPException
 
 from app.multi_agent.analysis.orchestrator import OrchestratorAgent
-from app.multi_agent.analysis.schema import StartupProfile
+from app.multi_agent.analysis.schema import CompanyProfile, StartupProfile
 from app.multi_agent.analysis.target_company_profiler_agent import (
     TargetCompanyProfilerAgent,
 )
@@ -15,7 +15,7 @@ router = APIRouter()
 
 
 @router.post("/company_websearch")
-async def company_websearch(target_profile: StartupProfile):
+async def company_websearch(target_profile: CompanyProfile):
     try:
         company_websearch_agent = OrchestratorAgent()
         content = await company_websearch_agent.run_analysis(
