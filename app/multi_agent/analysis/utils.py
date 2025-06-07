@@ -109,9 +109,8 @@ async def call_single_agent(
     Helper function to call a single agent, manage its session, and parse its JSON output.
     """
     logger.info(f"Calling agent '{agent_instance.name}'")
-    session_service = (
-        InMemorySessionService()
-    )  # Each sub-agent gets its own session service for isolated runs
+    session_service = InMemorySessionService()
+
     runner = Runner(
         agent=agent_instance, app_name=APP_NAME, session_service=session_service
     )
