@@ -13,6 +13,7 @@ from ..prompts import COMPETITOR_DETAILS_PROMPT
 logger = logging.getLogger("uvicorn")
 MAX_CONCURRENT_PROFILES = 2
 
+
 class CompetitorDetailsAgent:
     def __init__(self):
         self.agent = Agent(
@@ -30,7 +31,7 @@ class CompetitorDetailsAgent:
     ) -> CompetitorProfile:
         input_data = competitor_info.model_dump()
         json_response = await call_single_agent(
-            self.agent, user_id, session_id, COMPETITOR_DETAILS_PROMPT, input_data
+            self.agent, user_id, session_id, "", input_data
         )
         logger.info(f"CompetitorDetailsAgent response: {json_response}")
         # If the agent returns an empty dict or invalid data, handle it gracefully

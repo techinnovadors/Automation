@@ -29,13 +29,11 @@ Extract the following fields:
 7. **Geographic Footprint** - Where the company operates or has a presence.
 8. **Unique Value Propositions** - What makes this company stand out from competitors?
 9. **Recent Developments** - Any events in the last 2-3 years such as funding rounds, acquisitions, new launches, or regulatory changes, with dates and sources.
-10. **Citations** - List of all data sources used, including source name and URL (and date if applicable).
 11. **Optional**: Include `other_relevant_info` only if the content doesn't fit under other fields but is important.
 
 ⚠️ Strict Output Constraints:
 - You MUST only return a **raw JSON object** (no markdown, no HTML, no code blocks).
 - JSON must fully comply with the structure of the `CompanyProfile` schema below.
-- Include citations with every factual entry, prioritizing company websites and credible sources.
 - If a field has no data available, use `null` or omit it — do NOT guess.
 
 {JSON_OUTPUT_FORMAT}
@@ -76,13 +74,11 @@ Extract the following fields:
 7. **Geographic Footprint** - Where the company operates or has a presence.
 8. **Unique Value Propositions** - What makes this company stand out from competitors?
 9. **Recent Developments** - Any events in the last 2-3 years such as funding rounds, acquisitions, new launches, or regulatory changes, with dates and sources.
-10. **Citations** - List of all data sources used, including source name and URL (and date if applicable).
 11. **Optional**: Include `other_relevant_info` only if the content doesn't fit under other fields but is important.
 
 ⚠️ Strict Output Constraints:
 - You MUST only return a **raw JSON object** (no markdown, no HTML, no code blocks).
 - JSON must fully comply with the structure of the `CompanyProfile` schema below.
-- Include citations with every factual entry, prioritizing company websites and credible sources.
 - If a field has no data available, use `null` or omit it — do NOT guess.
 
 {JSON_OUTPUT_FORMAT}

@@ -34,7 +34,7 @@ class ExecutiveSummaryAgent:
             "recommendations": [r.model_dump() for r in report_data.recommendations],
         }
         json_response = await call_single_agent(
-            self.agent, user_id, session_id, EXECUTIVE_SUMMARY_PROMPT, input_data
+            self.agent, user_id, session_id, "", input_data
         )
         # The prompt expects a single string as JSON output (e.g., "This is the summary.")
         # json.loads will parse this directly as a string.

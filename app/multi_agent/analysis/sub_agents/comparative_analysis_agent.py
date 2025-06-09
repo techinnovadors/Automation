@@ -36,6 +36,6 @@ class ComparativeAnalysisAgent:
             "competitor_profiles": [p.model_dump() for p in competitor_profiles],
         }
         json_response = await call_single_agent(
-            self.agent, user_id, session_id, COMPARATIVE_ANALYSIS_PROMPT, input_data
+            self.agent, user_id, session_id, "", input_data
         )
         return ComparativeAnalysisResult.model_validate(json_response)

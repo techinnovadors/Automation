@@ -2,10 +2,10 @@ from pydantic import BaseModel, Field
 from typing import List, Dict, Optional, Any
 
 
-class Citation(BaseModel):
-    source_name: str
-    date: Optional[str] = None
-    source_url: Optional[str] = None
+# class Citation(BaseModel):
+#     source_name: str
+#     date: Optional[str] = None
+#     source_url: Optional[str] = None
 
 
 class Headquarters(BaseModel):
@@ -66,7 +66,7 @@ class CompanyProfile(BaseModel):
     geographic_footprint: List[GeographicFootprintEntry] = Field(default_factory=list)
     unique_value_propositions: List[ValueProposition] = Field(default_factory=list)
     recent_developments: List[RecentDevelopment] = Field(default_factory=list)
-    citations: List[Citation] = Field(default_factory=list)
+    # citations: List[Citation] = Field(default_factory=list)
     other_relevant_info: Optional[Dict[str, Any]] = None
 
     class Config:

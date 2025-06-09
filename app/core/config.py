@@ -21,13 +21,13 @@ class Settings(BaseSettings):
     DEBUG: bool = False
 
     # Google settings
-    GOOGLE_API_KEY: str
+    GOOGLE_API_KEY: str = "AIzaSyBB2Dokeq-ehG4uDylTUxS71WdIcMi0Ct8"
     GOOGLE_GENAI_USE_VERTEXAI: bool = False
     GOOGLE_CLOUD_PROJECT: str | None = None
     GOOGLE_CLOUD_LOCATION: str | None = None
 
     # Tavily settings
-    TAVILY_API_KEY: str
+    # TAVILY_API_KEY: str
 
     model_config = SettingsConfigDict(env_file=".env", case_sensitive=True)
 

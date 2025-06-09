@@ -25,7 +25,7 @@ class CompetitorIdentificationAgent:
             self.agent,
             user_id,
             session_id,
-            COMPETITOR_IDENTIFICATION_PROMPT,
+            "",
             input_data,
         )
         return [CompetitorInfo.model_validate(item) for item in json_response]
